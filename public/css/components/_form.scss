@@ -1,0 +1,36 @@
+.contact {
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+
+        padding: 2rem;
+        text-align: center;
+
+        &-input{
+            width: 50%;
+            height: 4rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 2rem auto;
+            padding: .5rem 2.5rem;
+            border-radius: 100px;
+            background-color: $color-gray-light-1;
+            font-family: inherit;
+            border: none;
+            outline: none;
+        }
+        textarea{
+            height: unset;
+            border-radius: 20px;
+            padding: 1.5rem;
+        }
+
+        &-label{
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            letter-spacing: 2px;
+            // margin-bottom: 2rem;
+        }
+    }
+}

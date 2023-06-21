@@ -36,6 +36,12 @@
         text-transform: uppercase;
         list-style: none;
         margin: 2rem 0;
+
+        &:hover,
+        &:active {
+            font-size: 2rem;
+        }
+
     }
 
     &__link:link,
@@ -61,25 +67,32 @@
         padding: .5rem;
 
         border-radius: 100%;
-        top: 1rem;
-        right: 1rem;
+        top: 2rem;
+        right: 2rem;
         background-color: $color-gray-light-1;
 
-
-        &:hover {
-            .nav__hamburger-line {
-                margin: .2rem auto;
-            }
+        &:hover,
+        &:active {
+            background-color: rgba($color-gray-light-3, 0.95);
         }
 
         &-line {
+            position: absolute;
             display: inline-block;
             background-color: black;
-            margin: .3rem auto;
             height: 0.5rem;
             width: 3rem;
             transition: all .2s;
+            left: 1.4rem;
+            border-radius: 2px;
 
+            &-1 {
+                top: 1.5rem;
+            }
+
+            &-3 {
+                bottom: 1.5rem;
+            }
         }
     }
 }

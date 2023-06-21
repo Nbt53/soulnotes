@@ -1,0 +1,20 @@
+<% layout('./layouts/boilerplate') -%>
+
+    <section class="product-add">
+        <form action="/products" method="POST" class="contact__form">
+
+            <label for="name" class="contact__form-label">product name</label>
+            <input type="text" class="contact__form-input" id="name" name="name">
+            
+            <!-- need to add image upload -->
+            <label for="image" class="contact__form-label">image</label>
+            <input type="text" class="contact__form-input" id="image" name="image">
+            <label for="price" class="contact__form-label">price</label>
+            <input type="number" class="contact__form-input" id="price" name="price">
+            <label for="qty" class="contact__form-label">qty</label>
+            <input type="number" class="contact__form-input" id="qty" name="qty">
+
+
+            <button class="btn btn-form">submit</button>
+        </form>
+    </section>

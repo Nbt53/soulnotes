@@ -1,0 +1,14 @@
+<% layout('./layouts/boilerplate') -%>
+    <section class="contact">
+        <form action="/contact" method="POST" class="contact__form">
+
+            <label for="name" class="contact__form-label">name</label>
+            <input type="text" class="contact__form-input" id="name" name="name">
+            <label for="email" class="contact__form-label">e-mail</label>
+            <input type="email" class="contact__form-input" id="email" name="email">
+            <label for="text" class="contact__form-label">text</label>
+            <textarea name="text" id="text" cols="30" rows="10" class="contact__form-input">Type here</textarea>
+
+            <button class="btn btn-form">submit</button>
+        </form>
+    </section>

@@ -1,2 +1,27 @@
-create a few designs
+current
 
+next
+security
+
+set up database
+
+set up models:
+    -customer
+    -product
+    -contact
+
+set up image database
+
+set up security
+    -helmet
+    -sanitize
+
+fix designs
+    -cards
+
+fix bugs
+    -no db connected
+    -icons above navbar
+
+areas not happy with
+    -contact needs more text    

@@ -9,7 +9,7 @@ const methodOverride = require('method-override');
 //variables for set up
 const secret = '4684a58s4d78f54g1h2ddd58h'
 const port = 3000
-const dbUrl = 'mongodb://127.0.0.1:27017/template' 
+const dbUrl = 'mongodb://127.0.0.1:27017/soulnotes' 
 //set up local mongoose store
 
 mongoose.connect(dbUrl)
@@ -48,9 +48,14 @@ app.set('views', path.join(__dirname, 'views'));
 //to use css and js
 app.use(express.static(__dirname + '/public'));
 
-app.get('/', (req, res)=>{
-    res.render('home', { currentPage: 'home' })
-})
+
+///routes
+const routes = require('./routes/routes')
+const products = require('./routes/products')
+app.use('/', routes )
+app.use('/products', products )
+
+
 
 // set up express
 app.listen(port, () => { console.log(` Serving on ${port}. Press ctl + c to exit`) })

@@ -1,0 +1,42 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+    margin: 0 auto;
+    border-right: 1px $color-gold-1 solid;
+    border-left: 1px $color-gold-1 solid;
+
+    &-header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        border-bottom: 1px $color-gold-1 solid;
+        margin: 1rem;
+    }
+    
+    &-body{
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &-img {
+        display: inline-block;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    &-title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin: 3rem;
+        text-transform: uppercase;
+    }
+
+    &-item {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        margin-bottom: 2rem;
+    }
+}

@@ -1,0 +1,24 @@
+.btn {
+    border: none;
+    background-color: unset;
+    color: inherit;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem;
+    transition: all .8s;
+    border: 2px ridge rgba($color-gold-1, 0);
+
+    &:hover,
+    &:active {
+        transform: scale(1.2);
+        border: 2px ridge rgba($color-gold-1, 1);
+        
+    }
+
+    &-form {
+        margin-top: 2rem;
+    }
+}

@@ -1,0 +1,56 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(39, 37, 37);
+    color: inherit;
+    padding: 2rem;
+    text-transform: uppercase;
+
+    &__header {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin-bottom: 2rem;
+    }
+
+    &__socials {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+
+        &-link:link,
+        &-link:visited {
+            text-decoration: none;
+            color: inherit;
+
+            ion-icon {
+                color: inherit;
+            }
+
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.4rem;
+
+        &-link:link,
+        &-link:visited {
+            text-decoration: none;
+            color: inherit;
+
+            &:not(:last-child){
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .copyright{
+        align-self:flex-end;
+        margin-top: 1rem;
+    }
+}
