@@ -6,6 +6,7 @@
     margin: 0 auto;
     border-right: 1px $color-gold-1 solid;
     border-left: 1px $color-gold-1 solid;
+    margin-bottom: 2rem;
 
     &-header {
         display: flex;
@@ -14,8 +15,8 @@
         border-bottom: 1px $color-gold-1 solid;
         margin: 1rem;
     }
-    
-    &-body{
+
+    &-body {
         text-align: center;
         text-transform: uppercase;
     }
@@ -24,6 +25,10 @@
         display: inline-block;
         width: 60%;
         margin: 0 auto;
+        margin-bottom: 2rem;
+        border: .5px $color-gold-1 ridge;
+        box-shadow: 0px 0px 6rem #766746c2;
+        border-radius: 10px;
     }
 
     &-title {
@@ -35,8 +40,13 @@
     }
 
     &-item {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         letter-spacing: 1px;
         margin-bottom: 2rem;
     }
+
+    &-delete {
+        display: inline-block;
+    }
+
 }

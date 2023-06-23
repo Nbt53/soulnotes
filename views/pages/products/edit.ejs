@@ -1,0 +1,24 @@
+<% layout('./layouts/boilerplate') -%>
+    <% product=product[0] %>
+        <section class="product-edit">
+            <form action="/products/edit/<%= product.name %>?_method=PATCH" method="POST" class="contact__form">
+
+                <label for="name" class="contact__form-label">product name</label>
+                <input type="text" class="contact__form-input" id="name" name="name" value="<%= product.name %>"
+                    required>
+
+                <!-- need to add image upload -->
+                <label for="image" class="contact__form-label">image</label>
+                <input type="text" class="contact__form-input" id="image" name="image" value="<%= product.image %>"
+                    required>
+                <label for="price" class="contact__form-label">price</label>
+                <input type="number" class="contact__form-input" id="price" name="price" value="<%= product.price %>"
+                    required>
+                <label for="qty" class="contact__form-label">qty</label>
+                <input type="number" class="contact__form-input" id="qty" name="qty" value="<%= product.qty %>"
+                    required>
+
+
+                <button class="btn btn-form">submit</button>
+            </form>
+        </section>

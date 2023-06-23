@@ -1,0 +1,49 @@
+<% layout('./layouts/boilerplate') -%>
+    <section class="product">
+        <% product=product[0] %>
+            <div class="card">
+                <div class="card-header">
+                    <a href="/products/<%= product.name %>" class="link card-title">
+                        <%= product.name %>
+                    </a>
+                    <img src="/img/product-5.jpg" alt="" class="card-img">
+
+                </div>
+                <div class="card-body">
+                    <div class="card-item">£<%= product.price %>
+                    </div>
+                    <div class="card-item">
+                        <%= product.qty %> left in stock
+                    </div>
+                    <div class="card-item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nobis,
+                        quibusdam dolor voluptatem necessitatibus laudantium cumque? Placeat molestiae voluptas
+                        consectetur.
+                        Eos, nulla non et deleniti laborum qui vitae molestiae aliquam!
+                        Maxime dolore illo omnis expedita. Saepe et rem delectus incidunt nam deserunt officiis qui
+                        eveniet
+                        commodi quaerat, harum esse molestiae iure aspernatur enim velit vero minima asperiores fugiat
+                        eius
+                        ipsa?</div>
+                </div>
+
+                <div class="card-btn">
+
+                    <form action="/products/<%= product.name %>?_method=DELETE" class="card-delete" method="POST">
+                        <button class="btn card__btn-btn btn-card">
+                            Delete
+                        </button>
+                    </form>
+
+                    <button class="btn card__btn-btn btn-card">
+                        <a href="/products/edit/<%= product.name %>" class="link">Edit</a>
+                    </button>
+
+                    <button class="btn card__btn-btn btn-card">
+                        <a href="" class="link">Add to basket</a>
+                    </button>
+
+                </div>
+            </div>
+
+
+    </section>

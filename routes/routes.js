@@ -1,5 +1,5 @@
 const express = require('express');
-const { renderHome, renderContact, submitContact } = require('../controllers/controllers');
+const { renderHome, renderContact, submitContact, renderAbout } = require('../controllers/controllers');
 const router = express.Router();
 
 router.route('/')
@@ -8,5 +8,8 @@ router.route('/')
 router.route('/contact')
     .get(renderContact)
     .post(submitContact)
+
+    router.route('/about')
+    .get(renderAbout)
 
 module.exports = router; 

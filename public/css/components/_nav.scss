@@ -13,6 +13,7 @@
     z-index: 10000;
     border-right: 5px solid $color-gold-1;
     transition: all .7s;
+    
 
     &__container {
         display: inline-block;
@@ -21,6 +22,17 @@
         height: 10rem;
         width: 100%;
         transition: all .8s;
+    }
+
+    &__icon {
+        position: absolute;
+        width: 10rem;
+        display: block;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 900;
+        
     }
 
     &__links {
@@ -69,7 +81,7 @@
         border-radius: 100%;
         top: 2rem;
         right: 2rem;
-        background-color: $color-gray-light-1;
+        background-color: $color-gray-light-2;
 
         &:hover,
         &:active {

@@ -63,6 +63,15 @@ body {
   width: 100%;
   transition: all 0.8s;
 }
+.nav__icon {
+  position: absolute;
+  width: 10rem;
+  display: block;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 900;
+}
 .nav__links {
   display: flex;
   flex-direction: column;
@@ -99,10 +108,10 @@ body {
   border-radius: 100%;
   top: 2rem;
   right: 2rem;
-  background-color: #f8f9fa;
+  background-color: #e9ecef;
 }
 .nav__hamburger:hover, .nav__hamburger:active {
-  background-color: rgba(206, 212, 218, 0.95);
+  background-color: rgba(236, 236, 237, 0.95);
 }
 .nav__hamburger-line {
   position: absolute;
@@ -134,6 +143,7 @@ body {
   padding: 1rem;
   transition: all 0.8s;
   border: 2px ridge rgba(189, 166, 112, 0);
+  cursor: pointer;
 }
 .btn:hover, .btn:active {
   transform: scale(1.2);
@@ -141,6 +151,13 @@ body {
 }
 .btn-form {
   margin-top: 2rem;
+}
+.btn-slideshow {
+  font-size: 2rem;
+}
+.btn-card {
+  padding: 0.5rem;
+  font-size: 1.2rem;
 }
 
 .contact__form {
@@ -157,7 +174,7 @@ body {
   margin: 2rem auto;
   padding: 0.5rem 2.5rem;
   border-radius: 100px;
-  background-color: #f8f9fa;
+  background-color: #ececed;
   font-family: inherit;
   border: none;
   outline: none;
@@ -227,6 +244,7 @@ body {
   margin: 0 auto;
   border-right: 1px #bda670 solid;
   border-left: 1px #bda670 solid;
+  margin-bottom: 2rem;
 }
 .card-header {
   display: flex;
@@ -243,6 +261,10 @@ body {
   display: inline-block;
   width: 60%;
   margin: 0 auto;
+  margin-bottom: 2rem;
+  border: 0.5px #bda670 ridge;
+  box-shadow: 0px 0px 6rem rgba(118, 103, 70, 0.7607843137);
+  border-radius: 10px;
 }
 .card-title {
   font-size: 1.8rem;
@@ -252,9 +274,31 @@ body {
   text-transform: uppercase;
 }
 .card-item {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   letter-spacing: 1px;
   margin-bottom: 2rem;
+}
+.card-delete {
+  display: inline-block;
+}
+
+.slideshow {
+  width: 100%;
+}
+.slideshow__container {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.slideshow__items {
+  min-width: 50%;
+  margin: 0 25%;
+}
+.slideshow__btn {
+  margin: 2rem 0;
+  display: flex;
+  font-weight: 800;
+  width: 100%;
 }
 
 .header {
@@ -316,4 +360,18 @@ body {
 }
 .product__admin {
   padding: 4rem;
+}
+
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.about__title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  align-self: center;
+  margin-bottom: 2rem;
 }/*# sourceMappingURL=main.css.map */

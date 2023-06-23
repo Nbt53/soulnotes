@@ -1,11 +1,13 @@
 <nav class="nav__container">
+  <img src="/img/logo-main.png" alt="" class="nav__icon">
+
   <div class="nav">
     <ul class="nav__links">
       <li class="nav__items <%= currentPage === 'home' ? 'u-underline' : '' %>">
         <a href="/" class="nav__link">Home</a>
       </li><span class="nav__divider">|</span>
       <li class="nav__items <%= currentPage === 'about' ? 'u-underline' : '' %>">
-        <a href="" class="nav__link">About</a>
+        <a href="/about" class="nav__link">About</a>
       </li><span class="nav__divider">|</span>
       <li class="nav__items <%= currentPage === 'products' ? 'u-underline' : '' %>">
         <a href="/products" class="nav__link">Our Products</a>

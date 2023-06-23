@@ -10,15 +10,25 @@
     padding: 1rem;
     transition: all .8s;
     border: 2px ridge rgba($color-gold-1, 0);
+    cursor: pointer;
 
     &:hover,
     &:active {
         transform: scale(1.2);
         border: 2px ridge rgba($color-gold-1, 1);
-        
+
     }
 
     &-form {
         margin-top: 2rem;
+    }
+
+    &-slideshow {
+        font-size: 2rem;
+    }
+
+    &-card {
+        padding: .5rem;
+        font-size: 1.2rem;
     }
 }

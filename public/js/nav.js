@@ -3,6 +3,7 @@ const burger = document.querySelector('.nav__hamburger')
 const burgerLine1 = document.querySelector('.nav__hamburger-line-1')
 const burgerLine2 = document.querySelector('.nav__hamburger-line-2')
 const burgerLine3 = document.querySelector('.nav__hamburger-line-3')
+const navIcon = document.querySelector('.nav__icon')
 
 let expanded = 0
 
@@ -30,4 +31,16 @@ burger.addEventListener('click', (e) => {
     }
 
 })
+
+
+
+window.addEventListener('scroll', function() {
+    
+    const scrollPos = window.pageYOffset;
+if(scrollPos > 0){
+navIcon.style.display = 'none'
+}else{
+    navIcon.style.display = 'block'
+}
+});
 

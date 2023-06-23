@@ -1,9 +1,12 @@
 current
+edit page
 
 next
-security
+
 
 set up database
+    -decide where to store the database
+    -upload to atlas so i can deploy
 
 set up models:
     -customer
@@ -11,17 +14,27 @@ set up models:
     -contact
 
 set up image database
+    -cloudinary? 
+    -aws?
 
 set up security
     -helmet
-    -sanitize
+    -sanitize( need to make it work properly)
 
 fix designs
     -cards
+    -try changing transparency rather than display on nav logo
 
 fix bugs
     -no db connected
     -icons above navbar
+    -does sanitize work
+    -buttons on product show cards
 
 areas not happy with
     -contact needs more text    
+
+
+media queries
+    - small phone
+       ~padding on home page    

@@ -11,17 +11,6 @@ module.exports.submitContact = (req, res) => {
     res.send(response)
 }
 
-/////products
-
-module.exports.renderProduct = (req, res) => {
-    res.render('pages/products/show', { currentPage: 'products' })
-}
-
-module.exports.renderProductNew =(req, res) => {
-    res.render('pages/products/new', {currentPage: 'products'})
-}
-
-module.exports.submitProduct = (req, res) => {
-    const response = req.body
-    res.send(response)
+module.exports.renderAbout = (req, res) => {
+    res.render('pages/about', { currentPage: 'about' })
 }

@@ -5,24 +5,54 @@ const session = require('express-session');
 const ejsMate = require('ejs-mate');
 const path = require('path');
 const methodOverride = require('method-override');
+const mongoSanitize = require('express-mongo-sanitize');
+const helmet = require('helmet')
+const {connectSrcUrls, scriptSrcUrls, styleSrcUrls, fontSrcUrls} = require('./whitelist')
 
 //variables for set up
 const secret = '4684a58s4d78f54g1h2ddd58h'
 const port = 3000
-const dbUrl = 'mongodb://127.0.0.1:27017/soulnotes' 
+const dbUrl = 'mongodb://127.0.0.1:27017/soulnotes'
 //set up local mongoose store
 
 mongoose.connect(dbUrl)
-    .then(() => {
-        console.log('database Connected')
-    })
-    .catch(err => {
-        console.log('Mongo connection error')
-        console.log(err)
-    })
+  .then(() => {
+    console.log('database Connected')
+  })
+  .catch(err => {
+    console.log('Mongo connection error')
+    console.log(err)
+  })
 
-  // to parse objects
+// to parse objects
 app.use(express.urlencoded({ extended: true }));
+
+//security
+app.use(mongoSanitize());
+
+app.use(
+  helmet.contentSecurityPolicy({
+      directives: {
+          defaultSrc: [],
+          connectSrc: ["'self'", ...connectSrcUrls],
+          scriptSrc: ["'unsafe-inline'", "'self'", ...scriptSrcUrls],
+          styleSrc: ["'self'", "'unsafe-inline'", ...styleSrcUrls],
+          workerSrc: ["'self'", "blob:"],
+          objectSrc: [],
+          imgSrc: [
+              "'self'",
+              "blob:",
+              "data:",
+              "https://res.cloudinary.com/djj2nhj8d/", 
+              "https://images.unsplash.com/"
+          ],
+          fontSrc: ["'self'", ...fontSrcUrls],
+          mediaSrc: ["https://res.cloudinary.com/dv5vm4sqh/"],
+          childSrc: ["blob:"]
+      }
+  })
+);
+
 
 //config up sessions
 const sessionConfig = {
@@ -51,9 +81,9 @@ app.use(express.static(__dirname + '/public'));
 
 ///routes
 const routes = require('./routes/routes')
-const products = require('./routes/products')
-app.use('/', routes )
-app.use('/products', products )
+const products = require('./routes/products');
+app.use('/', routes)
+app.use('/products', products)
 
 
 
