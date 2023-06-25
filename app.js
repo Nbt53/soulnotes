@@ -1,19 +1,22 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
+const dotEnv = require('dotenv').config();
 const session = require('express-session');
 const ejsMate = require('ejs-mate');
 const path = require('path');
 const methodOverride = require('method-override');
 const mongoSanitize = require('express-mongo-sanitize');
 const helmet = require('helmet')
-const {connectSrcUrls, scriptSrcUrls, styleSrcUrls, fontSrcUrls} = require('./whitelist')
-
+const { connectSrcUrls, scriptSrcUrls, styleSrcUrls, fontSrcUrls } = require('./whitelist')
+//const dbUrl =  'mongodb://127.0.0.1:27017/soulnotes'
+const dbUrl = `mongodb+srv://nic853nh:${process.env.ATLAS_LOGIN}@soulnotes.notpmyl.mongodb.net/?retryWrites=true&w=majority` || 'mongodb://127.0.0.1:27017/soulnotes'
+//set up local mongoose store
 //variables for set up
 const secret = '4684a58s4d78f54g1h2ddd58h'
 const port = 3000
-const dbUrl = 'mongodb://127.0.0.1:27017/soulnotes'
-//set up local mongoose store
+
+
 
 mongoose.connect(dbUrl)
   .then(() => {
@@ -32,24 +35,24 @@ app.use(mongoSanitize());
 
 app.use(
   helmet.contentSecurityPolicy({
-      directives: {
-          defaultSrc: [],
-          connectSrc: ["'self'", ...connectSrcUrls],
-          scriptSrc: ["'unsafe-inline'", "'self'", ...scriptSrcUrls],
-          styleSrc: ["'self'", "'unsafe-inline'", ...styleSrcUrls],
-          workerSrc: ["'self'", "blob:"],
-          objectSrc: [],
-          imgSrc: [
-              "'self'",
-              "blob:",
-              "data:",
-              "https://res.cloudinary.com/djj2nhj8d/", 
-              "https://images.unsplash.com/"
-          ],
-          fontSrc: ["'self'", ...fontSrcUrls],
-          mediaSrc: ["https://res.cloudinary.com/dv5vm4sqh/"],
-          childSrc: ["blob:"]
-      }
+    directives: {
+      defaultSrc: [],
+      connectSrc: ["'self'", ...connectSrcUrls],
+      scriptSrc: ["'unsafe-inline'", "'self'", ...scriptSrcUrls],
+      styleSrc: ["'self'", "'unsafe-inline'", ...styleSrcUrls],
+      workerSrc: ["'self'", "blob:"],
+      objectSrc: [],
+      imgSrc: [
+        "'self'",
+        "blob:",
+        "data:",
+        "https://res.cloudinary.com/djj2nhj8d/",
+        "https://images.unsplash.com/"
+      ],
+      fontSrc: ["'self'", ...fontSrcUrls],
+      mediaSrc: ["https://res.cloudinary.com/dv5vm4sqh/"],
+      childSrc: ["blob:"]
+    }
   })
 );
 

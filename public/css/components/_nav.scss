@@ -13,7 +13,7 @@
     z-index: 10000;
     border-right: 5px solid $color-gold-1;
     transition: all .7s;
-    
+
 
     &__container {
         display: inline-block;
@@ -22,17 +22,18 @@
         height: 10rem;
         width: 100%;
         transition: all .8s;
+        z-index: 10000;
     }
 
     &__icon {
         position: absolute;
         width: 10rem;
         display: block;
-        top: 0;
+        top: 1rem;
         left: 50%;
         transform: translateX(-50%);
         z-index: 900;
-        
+
     }
 
     &__links {

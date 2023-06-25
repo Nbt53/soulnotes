@@ -20,6 +20,7 @@
         justify-content: space-around;
         font-size: 1.8rem;
         margin-bottom: 2rem;
+       
 
         &-link:link,
         &-link:visited {
@@ -28,6 +29,8 @@
 
             ion-icon {
                 color: inherit;
+                position: relative;
+                z-index: 0;
             }
 
         }
@@ -43,14 +46,14 @@
             text-decoration: none;
             color: inherit;
 
-            &:not(:last-child){
+            &:not(:last-child) {
                 margin-bottom: 1rem;
             }
         }
     }
 
-    .copyright{
-        align-self:flex-end;
+    .copyright {
+        align-self: flex-end;
         margin-top: 1rem;
     }
 }

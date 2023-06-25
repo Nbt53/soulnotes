@@ -8,10 +8,13 @@ set up database
     -decide where to store the database
     -upload to atlas so i can deploy
 
+set up reviews    
+
 set up models:
     -customer
     -product
     -contact
+    -comment
 
 set up image database
     -cloudinary? 
@@ -24,15 +27,19 @@ set up security
 fix designs
     -cards
     -try changing transparency rather than display on nav logo
+    -single product show should look wider and bigger(for pc)
 
 fix bugs
     -no db connected
     -icons above navbar
     -does sanitize work
     -buttons on product show cards
+    -navbar closes when side is pressed
 
 areas not happy with
     -contact needs more text    
+    -add a landing page
+
 
 
 media queries

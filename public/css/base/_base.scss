@@ -14,5 +14,15 @@ body {
     font-family: 'Dosis', sans-serif;
     color: $color-gold-1;
     box-sizing: border-box;
-    background-color: black;
+    position: relative;
+}
+
+.content {
+    &__container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+    }
+
 }
