@@ -16,20 +16,17 @@
 
 <body class="d-flex flex-column vh-100">
 
-    <div class="content__container">
-        <div class="content__border-top content__border"></div>
-        <div class="content__border-right content__border"></div>
-        <div class="content__border-bottom content__border"></div>
-        <div class="content__border-left content__border"></div>
-        <%- include('../partials/nav') %>
-            <%- body %>
-                <%- include('../partials/footer') %>
-    </div>
 
-    <script src="/js/nav.js"></script>
-    <script src="/js/slideshow.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <%- include('../partials/nav') %>
+        <%- body %>
+            <%- include('../partials/footer') %>
+
+
+                <script src="/js/nav.js"></script>
+                <script src="/js/slideshow.js"></script>
+                <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+                <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

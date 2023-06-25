@@ -26,13 +26,6 @@ body {
   font-family: "Dosis", sans-serif;
   color: #bda670;
   box-sizing: border-box;
-  position: relative;
-}
-
-.content__container {
-  position: relative;
-  width: 100%;
-  height: 100%;
   background-color: black;
 }
 

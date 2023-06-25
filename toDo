@@ -24,6 +24,8 @@ set up security
     -helmet
     -sanitize( need to make it work properly)
 
+set up error handling    
+
 fix designs
     -cards
     -try changing transparency rather than display on nav logo
@@ -35,6 +37,7 @@ fix bugs
     -does sanitize work
     -buttons on product show cards
     -navbar closes when side is pressed
+    -about page has a white area at the bottom
 
 areas not happy with
     -contact needs more text    
