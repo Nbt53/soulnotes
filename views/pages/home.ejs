@@ -15,6 +15,16 @@
                 Your browser does not support the video tag.
             </video>
         </div>
+
+        <script>
+            var video = document.querySelector('video');
+            // var playButton = document.getElementById('play-button');
+
+            document.addEventListener('scroll', function () {
+                video.play();
+                //   playButton.style.display = 'none';
+            });
+        </script>
         <div class="home-story__content">
 
             <h2 class="title-secondary u-mb-small">Our Story</h2>
