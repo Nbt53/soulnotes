@@ -8,7 +8,8 @@ set up database
     -decide where to store the database
     -upload to atlas so i can deploy
 
-set up reviews    
+set up reviews  
+    -
 
 set up models:
     -customer
@@ -30,6 +31,8 @@ fix designs
     -cards
     -try changing transparency rather than display on nav logo
     -single product show should look wider and bigger(for pc)
+    -if(home) display something other than logo
+    -font in home about section
 
 fix bugs
     -no db connected

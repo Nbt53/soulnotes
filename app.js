@@ -50,7 +50,7 @@ app.use(
         "https://images.unsplash.com/"
       ],
       fontSrc: ["'self'", ...fontSrcUrls],
-      mediaSrc: ["https://res.cloudinary.com/dv5vm4sqh/"],
+      mediaSrc: ["'self'", "https://res.cloudinary.com/dv5vm4sqh/"],
       childSrc: ["blob:"]
     }
   })
