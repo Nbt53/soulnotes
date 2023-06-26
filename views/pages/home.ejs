@@ -34,6 +34,7 @@
             function playVideo() {
                 if (document.getElementById('video-element') != null && document.getElementById('video-element').paused) {
                     document.getElementById('video-element').play();
+                    alert('play')
                 }
             }
             document.body.addEventListener('touchend', playVideo)
