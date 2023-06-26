@@ -1,14 +1,14 @@
 <% layout('./layouts/boilerplate') -%>
 
     <section class="header">
-        <img src="img/logo-transparent.png" alt="love notes logo" class="header__logo">
+        <img src="img/logo-transparent-compact.png" alt="love notes logo" class="header__logo">
     </section>
 
 
 
     <section class="home-story">
         <div class="home-story__video">
-            <video autoplay loop muted playsinline preload="auto" id="video-element">
+            <video autoplay loop muted playsinline preload="metadata" id="video-element">
                 <source src="/video/perfume-table.mp4" type="video/mp4">
                 <!-- <source src="/video/perfume-table.webm" type="video/webm">
                 <source src="/video/perfume-table.ogv" type="video/ogg"> -->
@@ -32,16 +32,18 @@
 
         <script>
             function playVideo() {
-              var video = document.getElementById('video-element');
-              if (video && video.paused) {
-                video.play();
-              }
+                var video = document.getElementById('video-element');
+                if (video && video.paused) {
+
+                    video.play().catch(err => alert(err));
+
+                }
             }
-          
+
             document.getElementById('video-element').addEventListener('click', playVideo);
             document.body.addEventListener('touchend', playVideo);
-          </script>
-          
+        </script>
+
     </section>
 
     <section class="home-products">
