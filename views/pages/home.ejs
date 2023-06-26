@@ -32,13 +32,16 @@
 
         <script>
             function playVideo() {
-                if (document.getElementById('video-element') != null && document.getElementById('video-element').paused) {
-                    document.getElementById('video-element').play();
-                    alert('play')
-                }
+              var video = document.getElementById('video-element');
+              if (video && video.paused) {
+                video.play();
+              }
             }
-            document.body.addEventListener('touchend', playVideo)
-        </script>
+          
+            document.getElementById('video-element').addEventListener('click', playVideo);
+            document.body.addEventListener('touchend', playVideo);
+          </script>
+          
     </section>
 
     <section class="home-products">

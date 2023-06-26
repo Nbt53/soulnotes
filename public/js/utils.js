@@ -1,10 +1,16 @@
 module.exports.log = (message) => {
-    var logOutput = document.getElementById('log-output');
-    var logMessage = document.createElement('p');
-    logMessage.textContent = message;
-    logOutput.appendChild(logMessage);
-  }
+  var logOutput = document.getElementById('log-output');
+  var logMessage = document.createElement('p');
+  logMessage.textContent = message;
+  logOutput.appendChild(logMessage);
+}
 
+module.exports.playVideo = () => {
+  if (document.getElementById('video-element') != null && document.getElementById('video-element').paused) {
+    document.getElementById('video-element').play();
+    alert('play')
+  }
+}
 
 //   <script>
 //   <div id="log-output"></div>
