@@ -14,7 +14,6 @@
     border-right: 5px solid $color-gold-1;
     transition: all .7s;
 
-
     &__container {
         display: inline-block;
         position: sticky;
@@ -23,6 +22,7 @@
         width: 100%;
         transition: all .8s;
         z-index: 10000;
+        margin-bottom: 5rem;
     }
 
     &__icon {

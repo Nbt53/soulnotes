@@ -7,9 +7,11 @@ const ejsMate = require('ejs-mate');
 const path = require('path');
 const methodOverride = require('method-override');
 const mongoSanitize = require('express-mongo-sanitize');
+const ExpressError = require('./utils/ExpressError');
 const helmet = require('helmet')
 const { connectSrcUrls, scriptSrcUrls, styleSrcUrls, fontSrcUrls } = require('./whitelist')
-//const dbUrl =  'mongodb://127.0.0.1:27017/soulnotes'
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
 const dbUrl = `mongodb+srv://nic853nh:${process.env.ATLAS_LOGIN}@soulnotes.notpmyl.mongodb.net/?retryWrites=true&w=majority` || 'mongodb://127.0.0.1:27017/soulnotes'
 //set up local mongoose store
 //variables for set up
@@ -88,7 +90,14 @@ const products = require('./routes/products');
 app.use('/', routes)
 app.use('/products', products)
 
+app.all('*', (req, res, next) => {
+  next(new ExpressError('Page not found', 404))     /// throws error on any url that is'nt correct(404)
+})
 
+app.use((err, req, res, next) => {
+  const error = err
+  res.status(err.statusCode || 500).render('pages/error', {currentPage:error, error });
+});
 
 // set up express
 app.listen(port, () => { console.log(` Serving on ${port}. Press ctl + c to exit`) })

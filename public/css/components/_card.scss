@@ -4,15 +4,15 @@
     width: 80%;
     align-items: center;
     margin: 0 auto;
-    border-right: 1px $color-gold-1 solid;
-    border-left: 1px $color-gold-1 solid;
+    border-right: 2px $color-gold-1 ridge;
+    border-left: 2px $color-gold-1 ridge;
     margin-bottom: 2rem;
 
     &-header {
         display: flex;
         flex-direction: column;
         text-align: center;
-        border-bottom: 1px $color-gold-1 solid;
+        // border-bottom: 1px $color-gold-1 solid;
         margin: 1rem;
     }
 
@@ -23,9 +23,9 @@
 
     &-img {
         display: inline-block;
-        width: 60%;
+        width: 90%;
         margin: 0 auto;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         border: .5px $color-gold-1 ridge;
         box-shadow: 0px 0px 6rem #766746c2;
         border-radius: 10px;
@@ -35,8 +35,10 @@
         font-size: 1.8rem;
         font-weight: 600;
         letter-spacing: 2px;
-        margin: 3rem;
         text-transform: uppercase;
+        text-decoration: underline;
+        text-decoration-color: inherit;
+        text-decoration-style: ridged;
     }
 
     &-item {
@@ -52,8 +54,6 @@
     &-delete {
         display: inline-block;
     }
-
-
 
     &-product {
         // flex-direction: row;

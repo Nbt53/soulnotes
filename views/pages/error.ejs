@@ -1,0 +1,11 @@
+<% layout('./layouts/boilerplate') -%>
+    <section class="error">
+        <h1>
+            <%= error.message %>
+        </h1>
+        <p>
+            <% if (process.env.NODE_ENV !=="production" ) {%>
+                <%= error.stack %>
+                    <% } %>
+        </p>
+    </section>

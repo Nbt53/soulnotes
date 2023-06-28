@@ -1,35 +1,39 @@
 <% layout('./layouts/boilerplate') -%>
 
 
-
+    <section class="show">
         <% products.forEach(function(product) { %>
 
             <div class="card">
                 <div class="card-header">
-                    <a href="/products/<%= product.name %>" class="link card-title"><%= product.name %></a>
-                    <img src="img/product-5.jpg" alt="" class="card-img u-mb-lrg">
 
+                    <img src="img/product-5.jpg" alt="" class="card-img u-mb-lrg">
+                    <a href="/products/<%= product.name %>" class=" link">
+                        <div class="card-title">
+                            <%= product.name %>
+                        </div>
+                    </a>
                 </div>
                 <div class="card-body">
                     <div class="card-item">£<%= product.price %>
                     </div>
-                    <div class="card-item"><%= product.qty %> left in stock</div>
-                    <div class="card-item card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nobis,
-                        quibusdam dolor voluptatem necessitatibus laudantium cumque? Placeat molestiae voluptas
-                        consectetur.
-                        Eos, nulla non et deleniti laborum qui vitae molestiae aliquam!
-                        Maxime dolore illo omnis expedita. Saepe et rem delectus incidunt nam deserunt officiis qui
-                        eveniet
-                        commodi quaerat, harum esse molestiae iure aspernatur enim velit vero minima asperiores fugiat
-                        eius
-                        ipsa?</div>
-                </div> 
+                    <div class="card-item">
+                        <% if( product.qty < 5){ %>
+                            <%= product.qty %> left in stock
+                                <% } %>
+                    </div>
+                    <div class="card-item card-text">
+                        Notes: blah blah blah <br>
+                        suitable for: blah blah blah <br>
+                        blah: blah blah blah
+                    </div>
+                </div>
             </div>
 
-                <% }); %>
-                    
-            <div class="admin">
-                <button class="btn btn-primary"><a href="/products/new" class="link">add product</a> </button>
+            <% }); %>
 
-            </div>
+                <div class="admin">
+                    <button class="btn btn-primary"><a href="/products/new" class="link">add product</a> </button>
+
+                </div>
     </section>
