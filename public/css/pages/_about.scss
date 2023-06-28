@@ -2,13 +2,34 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin-top: 3rem;
+    padding: 0 $padding-large;
 
     &__title {
+        text-align: center;
         font-size: 2rem;
         font-weight: 700;
         letter-spacing: 1px;
         text-transform: uppercase;
         align-self: center;
         margin-bottom: 2rem;
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+    }
+
+    &__paragraph {
+        font-size: $font-size-larger;
+        margin: $padding-small 0;
+    }
+
+    &__img {
+        width: 30rem;
+        margin: 0 auto;
+        border-radius: 20px;
     }
 }
