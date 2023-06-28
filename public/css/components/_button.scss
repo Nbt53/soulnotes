@@ -31,4 +31,13 @@
         padding: .5rem;
         font-size: 1.2rem;
     }
+
+    &-section {
+        border: none;
+
+        &:hover,
+        &:active {
+            border: none;
+        }
+    }
 }

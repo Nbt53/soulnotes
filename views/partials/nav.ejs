@@ -1,35 +1,39 @@
 <nav class="nav__container">
   <a href="/" class="link">
-    <img src="/img/logo-main.png" alt="soul notes logo with link to home" class="nav__icon"></a>
+    <% if(currentPage !='home' ) {%>
+      <img src="/img/logo-main.png" alt="soul notes logo with link to home" class="nav__icon">
+  </a>
+  <% } %>
 
-  <div class="nav">
-    <ul class="nav__links">
-      <li class="nav__items <%= currentPage === 'home' ? 'u-underline' : '' %>">
-        <a href="/" class="nav__link">Home</a>
-      </li><span class="nav__divider">|</span>
-      <li class="nav__items <%= currentPage === 'about' ? 'u-underline' : '' %>">
-        <a href="/about" class="nav__link">About</a>
-      </li><span class="nav__divider">|</span>
-      <li class="nav__items <%= currentPage === 'products' ? 'u-underline' : '' %>">
-        <a href="/products" class="nav__link">Our Products</a>
-      </li>
-    </ul>
-    <ul class="nav__links">
-      <li class="nav__items <%= currentPage === 'signup' ? 'u-underline' : '' %>">
-        <a href="" class="nav__link">Sign up</a>
-      </li><span class="nav__divider">|</span>
-      <li class="nav__items <%= currentPage === 'basket' ? 'u-underline' : '' %>">
-        <a href="" class="nav__link">Basket</a>
-      </li><span class="nav__divider">|</span>
-      <li class="nav__items <%= currentPage === 'contact' ? 'u-underline' : '' %>">
-        <a href="/contact" class="nav__link">Contact</a>
-      </li>
-    </ul>
-  </div>
 
-  <div class="nav__hamburger">
-    <div class="nav__hamburger-line nav__hamburger-line-1"></div>
-    <div class="nav__hamburger-line nav__hamburger-line-2"></div>
-    <div class="nav__hamburger-line nav__hamburger-line-3"></div>
-  </div>
+    <div class="nav">
+      <ul class="nav__links">
+        <li class="nav__items <%= currentPage === 'home' ? 'u-underline' : '' %>">
+          <a href="/" class="nav__link">Home</a>
+        </li><span class="nav__divider">|</span>
+        <li class="nav__items <%= currentPage === 'about' ? 'u-underline' : '' %>">
+          <a href="/about" class="nav__link">About</a>
+        </li><span class="nav__divider">|</span>
+        <li class="nav__items <%= currentPage === 'products' ? 'u-underline' : '' %>">
+          <a href="/products" class="nav__link">Our Products</a>
+        </li>
+      </ul>
+      <ul class="nav__links">
+        <li class="nav__items <%= currentPage === 'signup' ? 'u-underline' : '' %>">
+          <a href="" class="nav__link">Sign up</a>
+        </li><span class="nav__divider">|</span>
+        <li class="nav__items <%= currentPage === 'basket' ? 'u-underline' : '' %>">
+          <a href="" class="nav__link">Basket</a>
+        </li><span class="nav__divider">|</span>
+        <li class="nav__items <%= currentPage === 'contact' ? 'u-underline' : '' %>">
+          <a href="/contact" class="nav__link">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="nav__hamburger">
+      <div class="nav__hamburger-line nav__hamburger-line-1"></div>
+      <div class="nav__hamburger-line nav__hamburger-line-2"></div>
+      <div class="nav__hamburger-line nav__hamburger-line-3"></div>
+    </div>
 </nav>

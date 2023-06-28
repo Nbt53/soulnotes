@@ -1,7 +1,7 @@
 .card {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 80%;
     align-items: center;
     margin: 0 auto;
     border-right: 1px $color-gold-1 solid;
@@ -45,8 +45,22 @@
         margin-bottom: 2rem;
     }
 
+    &-text {
+        margin: 0 2rem;
+    }
+
     &-delete {
         display: inline-block;
     }
 
+
+
+    &-product {
+        // flex-direction: row;
+
+        &-body {
+            display: flex;
+            flex-direction: row;
+        }
+    }
 }

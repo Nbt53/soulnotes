@@ -178,6 +178,12 @@ body {
   padding: 0.5rem;
   font-size: 1.2rem;
 }
+.btn-section {
+  border: none;
+}
+.btn-section:hover, .btn-section:active {
+  border: none;
+}
 
 .contact__form {
   display: flex;
@@ -260,7 +266,7 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 80%;
   align-items: center;
   margin: 0 auto;
   border-right: 1px #bda670 solid;
@@ -299,8 +305,15 @@ body {
   letter-spacing: 1px;
   margin-bottom: 2rem;
 }
+.card-text {
+  margin: 0 2rem;
+}
 .card-delete {
   display: inline-block;
+}
+.card-product-body {
+  display: flex;
+  flex-direction: row;
 }
 
 .slideshow {
