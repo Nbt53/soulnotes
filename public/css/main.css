@@ -84,9 +84,9 @@ body {
 }
 .nav__icon {
   position: absolute;
-  width: 10rem;
+  width: 15rem;
   display: block;
-  top: 1rem;
+  top: -1rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 900;
@@ -353,6 +353,7 @@ body {
   height: 30rem;
   background-color: rgba(248, 249, 250, 0.1);
   padding: 3rem 0;
+  margin-bottom: 5rem;
 }
 .home-products__container {
   position: relative;
@@ -373,6 +374,7 @@ body {
   position: relative;
   width: 100%;
   height: 50vh;
+  margin-bottom: 5rem;
   text-align: center;
 }
 .home-story__content {
@@ -380,7 +382,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  padding-top: 4rem;
+  padding-top: 2rem;
 }
 .home-story__video {
   position: relative;
@@ -400,7 +402,8 @@ body {
 }
 .home-story__text {
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 2rem;
+  font-weight: 500;
   padding: 2rem 3rem;
 }
 
@@ -420,12 +423,13 @@ body {
 }
 .about__title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 5rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 8px;
   text-transform: uppercase;
   align-self: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  text-shadow: #bda670 0 0px 2rem;
 }
 .about__section {
   display: flex;
@@ -434,11 +438,13 @@ body {
   width: 100%;
 }
 .about__paragraph {
-  font-size: 1.6rem;
+  font-size: 2rem;
+  font-weight: 500;
   margin: 1rem 0;
 }
 .about__img {
   width: 30rem;
   margin: 0 auto;
   border-radius: 20px;
+  box-shadow: #bda670 1px 1px 1rem;
 }/*# sourceMappingURL=main.css.map */

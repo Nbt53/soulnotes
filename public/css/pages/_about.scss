@@ -7,12 +7,13 @@
 
     &__title {
         text-align: center;
-        font-size: 2rem;
+        font-size: 5rem;
         font-weight: 700;
-        letter-spacing: 1px;
+        letter-spacing: 8px;
         text-transform: uppercase;
         align-self: center;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
+        text-shadow: $shadow-text-1
     }
 
     &__section {
@@ -24,6 +25,7 @@
 
     &__paragraph {
         font-size: $font-size-larger;
+        font-weight: 500;
         margin: $padding-small 0;
     }
 
@@ -31,5 +33,6 @@
         width: 30rem;
         margin: 0 auto;
         border-radius: 20px;
+        box-shadow: $shadow-1;
     }
 }
