@@ -29,6 +29,13 @@ body {
   background-color: black;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Dosis", sans-serif;
+}
+
 .u-underline {
   text-decoration: underline;
 }
@@ -129,6 +136,12 @@ body {
   top: 2rem;
   right: 2rem;
   background-color: #e9ecef;
+}
+.nav__hamburger .container {
+  display: none;
+  width: 100vw;
+  height: 100vw;
+  z-index: 10;
 }
 .nav__hamburger:hover, .nav__hamburger:active {
   background-color: rgba(236, 236, 237, 0.95);
@@ -344,7 +357,7 @@ body {
   display: block;
   margin: 0 auto;
   width: 90%;
-  margin-top: 2rem;
+  margin-top: -10rem;
   margin-bottom: 4rem;
 }
 

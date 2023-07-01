@@ -18,6 +18,27 @@
         </div>
     </div>
 
-   <sub class="copyright">&copy; SoulNotesLCLondon</sub> 
-   
+    <sub class="copyright">&copy; SoulNotesLCLondon</sub>
+    <script>
+        const caveat = "'Caveat', cursive"
+        const dancing = "'Dancing Script', cursive"
+        const kalam = "'Kalam', cursive"
+        const edu = " 'Edu QLD Beginner', cursive"
+
+    </script>
+    <br>
+    <select name="font" id="font">
+        <option value="caveat">caveat</option>
+        <option value="dancing">dancing</option>
+        <option value="kalam">kalam</option>
+        <option value="edu">edu</option>
+    </select>
+    <script>
+        const fontSelect = document.querySelector('#font')
+        fontSelect.addEventListener('change', (e) => {
+            const font = fontSelect.value
+            document.body.style.fontFamily = font
+        })
+    </script>
+
 </section>
