@@ -1,5 +1,4 @@
 current
-error handling
 
 next
 
@@ -24,7 +23,8 @@ set up security
     -helmet
     -sanitize( need to make it work properly)
 
-set up error handling    
+set up error handling 
+    - other errors?
 
 fix designs
     -cards
@@ -33,16 +33,12 @@ fix designs
     -font in home about section
 
 fix bugs
-    -no db connected
-    -icons above navbar
     -does sanitize work
     -buttons on product show cards
 
 areas not happy with
     -contact needs more text    
     -add a landing page
-
-
 
 media queries
     - small phone
