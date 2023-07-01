@@ -4,6 +4,8 @@ const burgerContainer = document.querySelector('.nav__hamburger-container')
 const burgerLine1 = document.querySelector('.nav__hamburger-line-1')
 const burgerLine2 = document.querySelector('.nav__hamburger-line-2')
 const burgerLine3 = document.querySelector('.nav__hamburger-line-3')
+
+///check if icon is present then turn it off when scrolling
 if(document.querySelector('.nav__icon')){
     const navIcon = document.querySelector('.nav__icon')
     window.addEventListener('scroll', function() {
@@ -20,15 +22,20 @@ if(document.querySelector('.nav__icon')){
 
 let expanded = 0
 
-burger.addEventListener('click', (e) => {
+
+
+
+
+const navExpand = () =>{
     if (expanded === 0) {
         navBar.style.left = "0"
         expanded = 1
-        burgerContainer.style.height = "100vh"
-       // burgerContainer.addEventListener('click', )
+        burgerContainer.style.display = "block"
+      
     } else {
         navBar.style.left = "-70%"
         expanded = 0
+        burgerContainer.style.display = "none"
     }
 
     if(expanded === 0){
@@ -45,8 +52,7 @@ burger.addEventListener('click', (e) => {
         burgerLine3.style.transform = "rotate(-45deg)"
     }
 
-})
+}
 
-
-
-
+burger.addEventListener('click', navExpand)
+burgerContainer.addEventListener('click', navExpand)

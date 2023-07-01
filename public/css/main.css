@@ -137,10 +137,12 @@ h4 {
   right: 2rem;
   background-color: #e9ecef;
 }
-.nav__hamburger .container {
+.nav__hamburger-container {
   display: none;
+  position: absolute;
+  top: 0;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   z-index: 10;
 }
 .nav__hamburger:hover, .nav__hamburger:active {

@@ -1,6 +1,9 @@
 <nav class="nav__container">
   <a href="/" class="link">
+
+
     <% if(currentPage !='home' ) {%>
+      <!-- turn off nav icon if home page -->
       <img src="/img/logo-transparent.png" alt="soul notes logo with link to home" class="nav__icon">
   </a>
   <% } %>
@@ -18,6 +21,7 @@
           <a href="/products" class="nav__link">Our Products</a>
         </li>
       </ul>
+
       <ul class="nav__links">
         <li class="nav__items <%= currentPage === 'signup' ? 'u-underline' : '' %>">
           <a href="" class="nav__link">Sign up</a>
@@ -29,12 +33,18 @@
           <a href="/contact" class="nav__link">Contact</a>
         </li>
       </ul>
+
     </div>
+
+
+    <div class="nav__hamburger">
+      <div class="nav__hamburger-line nav__hamburger-line-1"></div>
+      <div class="nav__hamburger-line nav__hamburger-line-2"></div>
+      <div class="nav__hamburger-line nav__hamburger-line-3"></div>
+    </div>
+
     <div class="nav__hamburger-container">
-      <div class="nav__hamburger">
-        <div class="nav__hamburger-line nav__hamburger-line-1"></div>
-        <div class="nav__hamburger-line nav__hamburger-line-2"></div>
-        <div class="nav__hamburger-line nav__hamburger-line-3"></div>
-      </div>
     </div>
+
+
 </nav>

@@ -84,10 +84,12 @@
         right: 2rem;
         background-color: $color-gray-light-2;
 
-        .container {
+        &-container {
             display: none;
+            position: absolute;
+            top: 0;
             width: 100vw;
-            height: 100vw;
+            height: 100vh;
             z-index: 10;
         }
 
