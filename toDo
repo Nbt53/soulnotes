@@ -1,12 +1,11 @@
 current
-error handeling
+error handling
 
 next
 
 
 set up database
     -decide where to store the database
-    -upload to atlas so i can deploy
 
 set up reviews  
     -
@@ -38,8 +37,6 @@ fix bugs
     -icons above navbar
     -does sanitize work
     -buttons on product show cards
-    -navbar closes when side is pressed
-    -about page has a white area at the bottom
 
 areas not happy with
     -contact needs more text    

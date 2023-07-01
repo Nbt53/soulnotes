@@ -1,21 +1,22 @@
 const express = require('express');
+const catchAsync = require('../utils/catchAsync')
 const { renderProduct, renderProductNew, submitProduct, renderShowProducts, destroyProduct, renderEditProduct, updateProduct } = require('../controllers/products');
 const router = express.Router();
 
 
 router.route('/')
-    .get(renderProduct)
-    .post(submitProduct)
+    .get(catchAsync(renderProduct))
+    .post(catchAsync(submitProduct))
 
 router.route('/new')
     .get(renderProductNew)
 
 router.route('/:id')
-    .get(renderShowProducts)
-    .delete(destroyProduct)
+    .get(catchAsync(renderShowProducts))
+    .delete(catchAsync(destroyProduct))
 
 router.route('/edit/:id')
-    .get(renderEditProduct)
-    .patch(updateProduct)
+    .get(catchAsync(renderEditProduct))
+    .patch(catchAsync(updateProduct))
 
 module.exports = router; 

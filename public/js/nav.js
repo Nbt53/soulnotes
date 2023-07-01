@@ -22,10 +22,6 @@ if(document.querySelector('.nav__icon')){
 
 let expanded = 0
 
-
-
-
-
 const navExpand = () =>{
     if (expanded === 0) {
         navBar.style.left = "0"
