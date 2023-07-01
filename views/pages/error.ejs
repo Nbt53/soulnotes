@@ -3,7 +3,7 @@
         <h1>
             <%= error.message %>
         </h1>
-        <p>
+        <p style="font-size: 2rem">
             <% if (process.env.NODE_ENV !=="production" ) {%>
                 <%= error.stack %>
                     <% } %>

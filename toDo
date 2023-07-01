@@ -23,6 +23,10 @@ set up security
     -helmet
     -sanitize( need to make it work properly)
 
+middleware
+- is logged in
+- is admin    
+
 set up error handling 
     - other errors?
 
@@ -35,6 +39,7 @@ fix designs
 fix bugs
     -does sanitize work
     -buttons on product show cards
+    -sort out redirect routes
 
 areas not happy with
     -contact needs more text    

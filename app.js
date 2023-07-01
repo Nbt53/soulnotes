@@ -17,7 +17,7 @@ const dbUrl = `mongodb+srv://nic853nh:${process.env.ATLAS_LOGIN}@soulnotes.notpm
 //variables for set up
 const secret = '4684a58s4d78f54g1h2ddd58h'
 const port = 3000
-
+const User = require('./models/User');
 
 
 mongoose.connect(dbUrl)
@@ -63,6 +63,7 @@ app.use(
 const sessionConfig = {
   secret: secret,
   resave: false,
+
   saveUninitialized: true,
   cookie: {
     httpOnly: true,
@@ -84,11 +85,32 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(__dirname + '/public'));
 
 
+app.use(passport.initialize());
+app.use(passport.session());   // allows consistent log in sessions so you don't have to log in every request, make sure session is used first
+passport.use(new LocalStrategy(User.authenticate()));
+
+passport.serializeUser(User.serializeUser()); // how we store user in the session
+passport.deserializeUser(User.deserializeUser());
+
+//// session
+app.use((req, res, next) => {
+  res.locals.currentUser = req.user;
+  if (req.isAuthenticated()) {
+    const user = res.locals.currentUser
+    console.log(user)
+  } else {
+    console.log('not logged in')
+  }
+  next();
+})
+
 ///routes
 const routes = require('./routes/routes')
 const products = require('./routes/products');
+const user = require('./routes/user');
 app.use('/', routes)
 app.use('/products', products)
+app.use('/user', user)
 
 app.all('*', (req, res, next) => {
   next(new ExpressError('Page not found', 404))     /// throws error on any url that is'nt correct(404)
@@ -96,7 +118,7 @@ app.all('*', (req, res, next) => {
 
 app.use((err, req, res, next) => {
   const error = err
-  res.status(err.statusCode || 500).render('pages/error', {currentPage:error, error });
+  res.status(err.statusCode || 500).render('pages/error', { currentPage: error, error });
 });
 
 // set up express

@@ -1,0 +1,17 @@
+<% layout('./layouts/boilerplate') -%>
+
+    <section class="signUp">
+        <form action="/user" method="POST" class="contact__form">
+
+            <label for="name" class="contact__form-label">Full Name</label>
+            <input type="text" class="contact__form-input" id="name" name="name">
+
+            <label for="password" class="contact__form-label">Password</label>
+            <input type="password" class="contact__form-input" id="password" name="password">
+
+            <label for="email" class="contact__form-label">e-mail</label>
+            <input type="email" class="contact__form-input" id="email" name="email">
+
+
+            <button class="btn btn-form">submit</button>
+        </form>

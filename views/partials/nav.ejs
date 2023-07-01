@@ -23,14 +23,20 @@
       </ul>
 
       <ul class="nav__links">
-        <li class="nav__items <%= currentPage === 'signup' ? 'u-underline' : '' %>">
-          <a href="" class="nav__link">Sign up</a>
         </li><span class="nav__divider">|</span>
         <li class="nav__items <%= currentPage === 'basket' ? 'u-underline' : '' %>">
           <a href="" class="nav__link">Basket</a>
         </li><span class="nav__divider">|</span>
         <li class="nav__items <%= currentPage === 'contact' ? 'u-underline' : '' %>">
           <a href="/contact" class="nav__link">Contact</a>
+        <li class="nav__items <%= currentPage === 'signup' ? 'u-underline' : '' %>">
+          <a href="/user/signup" class="nav__link">Sign up</a>
+        <li class="nav__items <%= currentPage === 'login' ? 'u-underline' : '' %>">
+          <a href="/user/login" class="nav__link">Log in</a>
+        <li class="nav__items">
+
+          <a href="/user/logout" class="nav__link">Log out</a>
+
         </li>
       </ul>
 
