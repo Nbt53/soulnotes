@@ -1,7 +1,7 @@
 current
 
 next
- fix links when logged in or not logged in
+ protect routes
 
 set up database
     -decide where to store the database
