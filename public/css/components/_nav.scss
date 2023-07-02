@@ -7,12 +7,14 @@
     top: 0;
     left: -70%;
     padding: 1rem;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     background-color: rgba($color-gray-light-1, 0.95);
     z-index: 10000;
     border-right: 5px solid $color-gold-1;
     transition: all .7s;
+    font-family: 'Dosis', sans-serif;
 
     &__container {
         display: inline-block;

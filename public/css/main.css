@@ -66,12 +66,14 @@ body {
   top: 0;
   left: -70%;
   padding: 1rem;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   background-color: rgba(248, 249, 250, 0.95);
   z-index: 10000;
   border-right: 5px solid #bda670;
   transition: all 0.7s;
+  font-family: "Dosis", sans-serif;
 }
 .nav__container {
   display: inline-block;

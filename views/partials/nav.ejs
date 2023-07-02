@@ -13,33 +13,38 @@
       <ul class="nav__links">
         <li class="nav__items <%= currentPage === 'home' ? 'u-underline' : '' %>">
           <a href="/" class="nav__link">Home</a>
-        </li><span class="nav__divider">|</span>
+        </li>
         <li class="nav__items <%= currentPage === 'about' ? 'u-underline' : '' %>">
           <a href="/about" class="nav__link">About</a>
-        </li><span class="nav__divider">|</span>
+        </li>
         <li class="nav__items <%= currentPage === 'products' ? 'u-underline' : '' %>">
           <a href="/products" class="nav__link">Our Products</a>
+        </li>
+        <li class="nav__items <%= currentPage === 'contact' ? 'u-underline' : '' %>">
+          <a href="/contact" class="nav__link">Contact</a>
         </li>
       </ul>
 
       <ul class="nav__links">
-        </li><span class="nav__divider">|</span>
+        </li>
         <li class="nav__items <%= currentPage === 'basket' ? 'u-underline' : '' %>">
           <a href="" class="nav__link">Basket</a>
-        </li><span class="nav__divider">|</span>
-        <li class="nav__items <%= currentPage === 'contact' ? 'u-underline' : '' %>">
-          <a href="/contact" class="nav__link">Contact</a>
-        <li class="nav__items <%= currentPage === 'signup' ? 'u-underline' : '' %>">
-          <a href="/user/signup" class="nav__link">Sign up</a>
-        <li class="nav__items <%= currentPage === 'login' ? 'u-underline' : '' %>">
-          <a href="/user/login" class="nav__link">Log in</a>
-        <li class="nav__items">
-
-          <a href="/user/logout" class="nav__link">Log out</a>
-
         </li>
-      </ul>
 
+
+        <% if(!currentUser){ %>
+          <li class="nav__items <%= currentPage === 'signup' ? 'u-underline' : '' %>">
+            <a href="/user/signup" class="nav__link">Sign up</a>
+          </li>
+          <li class="nav__items <%= currentPage === 'login' ? 'u-underline' : '' %>">
+            <a href="/user/login" class="nav__link">Log in</a>
+          </li>
+          <% }else{ %>
+            <li class="nav__items">
+              <a href="/user/logout" class="nav__link">Log out</a>
+            </li>
+            <% } %>
+      </ul>
     </div>
 
 
