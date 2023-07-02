@@ -97,10 +97,8 @@ app.use((req, res, next) => {
   res.locals.currentUser = req.user;
   if (req.isAuthenticated()) {
     const user = res.locals.currentUser
-    console.log(user)
-  } else {
-    console.log('not logged in')
-  }
+    
+  } 
   next();
 })
 

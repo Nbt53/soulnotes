@@ -23,17 +23,10 @@ html {
 }
 
 body {
-  font-family: "Dosis", sans-serif;
+  font-family: "Dancing Script", cursive;
   color: #bda670;
   box-sizing: border-box;
   background-color: black;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Dosis", sans-serif;
 }
 
 .u-underline {
