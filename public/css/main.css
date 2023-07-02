@@ -101,7 +101,7 @@ body {
   font-weight: 600;
   letter-spacing: 1px;
 }
-.nav__links:nth-child(1) {
+.nav__links-top {
   margin-bottom: 113%;
 }
 .nav__items {
