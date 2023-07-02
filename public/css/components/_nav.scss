@@ -6,8 +6,8 @@
     position: relative;
     top: 0;
     left: -70%;
-  //  padding: 1rem;
-    justify-content: space-between;
+    padding: 1rem;
+    // justify-content: space-between;
     align-items: center;
     text-align: center;
     background-color: rgba($color-gray-light-1, 0.95);
@@ -24,7 +24,7 @@
         width: 100%;
         transition: all .8s;
         z-index: 10000;
-        // margin-bottom: 5rem;
+        margin-bottom: 5rem;
     }
 
     &__icon {
@@ -45,6 +45,10 @@
         font-size: 1.8rem;
         font-weight: 600;
         letter-spacing: 1px;
+
+        &:nth-child(1) {
+            margin-bottom: 113%;
+        }
     }
 
     &__items {
