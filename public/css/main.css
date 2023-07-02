@@ -285,6 +285,7 @@ body {
   border-right: 2px #bda670 ridge;
   border-left: 2px #bda670 ridge;
   margin-bottom: 2rem;
+  font-family: "Dosis", sans-serif;
 }
 .card-header {
   display: flex;
