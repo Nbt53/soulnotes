@@ -82,7 +82,7 @@ body {
   height: 10rem;
   width: 100%;
   transition: all 0.8s;
-  margin-bottom: 5rem;
+  z-index: 10000;
 }
 .nav__icon {
   position: absolute;
