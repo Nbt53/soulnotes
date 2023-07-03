@@ -2,6 +2,7 @@ const express = require('express');
 const catchAsync = require('../utils/catchAsync');
 const passport = require('passport');
 const { renderSignUp, submitUser, renderLogin, login, logout } = require('../controllers/user');
+const { isLoggedIn } = require('../utils/middleware');
 const router = express.Router();
 
 router.route('/')
@@ -19,6 +20,6 @@ router.route('/login')
         keepSessionInfo: true
     }), login)
 
-    router.get('/logout', logout)
+router.get('/logout', isLoggedIn, logout)
 
 module.exports = router; 

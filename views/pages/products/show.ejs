@@ -31,9 +31,10 @@
             </div>
 
             <% }); %>
+                <% if(currentUser && currentUser.admin===true){ %>
+                    <div class="admin">
+                        <button class="btn btn-primary"><a href="/products/new" class="link">add product</a> </button>
 
-                <div class="admin">
-                    <button class="btn btn-primary"><a href="/products/new" class="link">add product</a> </button>
-
-                </div>
+                    </div>
+                    <% } %>
     </section>

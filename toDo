@@ -20,12 +20,11 @@ set up image database
     -aws?
 
 set up security
-    -helmet
+    -set up server side validation for admin
     -sanitize( need to make it work properly)
 
 middleware
-- is logged in
-- is admin    
+-set up flash
 
 set up error handling 
     - other errors?

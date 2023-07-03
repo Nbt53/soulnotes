@@ -3,7 +3,7 @@
         <% product=product[0] %>
 
 
-        
+
             <div class="card">
                 <div class="card-header">
                     <a href="/products/<%= product.name %>" class="link card-title">
@@ -30,24 +30,26 @@
                 </div>
 
                 <div class="card-btn">
+                    <% if(currentUser && currentUser.admin===true){ %>
+                        <form action="/products/<%= product.name %>?_method=DELETE" class="card-delete" method="POST">
+                            <button class="btn card__btn-btn btn-card">
+                                Delete
+                            </button>
+                        </form>
 
-                    <form action="/products/<%= product.name %>?_method=DELETE" class="card-delete" method="POST">
                         <button class="btn card__btn-btn btn-card">
-                            Delete
+                            <a href="/products/edit/<%= product.name %>" class="link">Edit</a>
                         </button>
-                    </form>
+                        <% } %>
 
-                    <button class="btn card__btn-btn btn-card">
-                        <a href="/products/edit/<%= product.name %>" class="link">Edit</a>
-                    </button>
 
-                    <button class="btn card__btn-btn btn-card">
-                        <a href="" class="link">Add to basket</a>
-                    </button>
+                            <button class="btn card__btn-btn btn-card">
+                                <a href="" class="link">Add to basket</a>
+                            </button>
 
                 </div>
             </div>
 
-          
+
 
     </section>
