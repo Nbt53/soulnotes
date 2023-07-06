@@ -9,3 +9,17 @@
     font-weight: 800;
     letter-spacing: 5px;
 }
+
+.credit {
+    font-family: 'Dosis', sans-serif;
+
+    
+
+    &-link {
+        transition: all .2s;
+        &:hover {
+            color: $color-gold-2;
+            font-size: 1.6rem;
+        }
+    }
+}

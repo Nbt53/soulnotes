@@ -64,6 +64,17 @@ h4 {
   letter-spacing: 5px;
 }
 
+.credit {
+  font-family: "Dosis", sans-serif;
+}
+.credit-link {
+  transition: all 0.2s;
+}
+.credit-link:hover {
+  color: #94804e;
+  font-size: 1.6rem;
+}
+
 .nav {
   display: flex;
   flex-direction: column;
@@ -243,6 +254,7 @@ h4 {
   color: inherit;
   padding: 2rem;
   text-transform: uppercase;
+  text-align: center;
 }
 .footer__header {
   text-align: center;
