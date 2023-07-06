@@ -11,15 +11,16 @@ html {
 }
 
 body {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Dosis', sans-serif;
     color: $color-gold-1;
     box-sizing: border-box;
     background-color: black;
 }
 
-// h1,
-// h2,
-// h3,
-// h4 {
-//     font-family: 'Dosis', sans-serif;
-// }
+h1,
+h2,
+h3,
+h4 {
+
+    font-family: 'Dancing Script', cursive;
+}

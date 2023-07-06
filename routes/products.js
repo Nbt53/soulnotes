@@ -1,13 +1,13 @@
 const express = require('express');
 const catchAsync = require('../utils/catchAsync')
 const { renderProduct, renderProductNew, submitProduct, renderShowProducts, destroyProduct, renderEditProduct, updateProduct } = require('../controllers/products');
-const { isLoggedIn, isAdmin } = require('../utils/middleware');
+const { isLoggedIn, isAdmin, validateProduct } = require('../utils/middleware');
 const router = express.Router();
 
 
 router.route('/')
     .get(catchAsync(renderProduct))
-    .post(isAdmin, catchAsync(submitProduct))
+    .post(isAdmin, validateProduct, catchAsync(submitProduct))
 
 router.route('/new')
     .get(isAdmin, renderProductNew)
