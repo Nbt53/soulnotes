@@ -13,10 +13,12 @@
 .credit {
     font-family: 'Dosis', sans-serif;
 
-    
+
 
     &-link {
+        font-size: 1.5rem;
         transition: all .2s;
+
         &:hover {
             color: $color-gold-2;
             font-size: 1.6rem;

@@ -34,6 +34,7 @@ fix designs
     -try changing transparency rather than display on nav logo
     -single product show should look wider and bigger(for pc)
     -font in home about section
+    -product show title
 
 fix bugs
     -does sanitize work
