@@ -1,4 +1,5 @@
 const { productSchema } = require("../models/joiSchemas")
+const ExpressError = require('../utils/ExpressError')
 
 module.exports.isLoggedIn = (req, res, next) => {
     if (!req.isAuthenticated()) {
@@ -10,18 +11,24 @@ module.exports.isLoggedIn = (req, res, next) => {
 module.exports.isAdmin = (req, res, next) => {
     if (req.isAuthenticated() && req.user.admin === true) {
         next()
+    } else {
+        res.redirect('/')
     }
-    res.redirect('/')
+
 }
 
-module.exports.validateProduct = async(req, res, next) =>{
+module.exports.validateProduct = async (req, res, next) => {
+    console.log(productSchema.validate(req.body))
     const { error } = productSchema.validate(req.body);
 
     if (error) {
-      const validationErrors = error.details.map(detail => detail.message);
-      const err = new ExpressError(validationErrors.join(', '), 400);
-      return next(err);
+        const msg = error.details.map(el => el.message).join(',')
+        console.log('error')
+        next(new ExpressError(msg, 400))
+    } else {
+        console.log('no error')
+        next();
     }
-  
-    next();
+
+
 }
