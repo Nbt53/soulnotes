@@ -18,15 +18,12 @@ module.exports.isAdmin = (req, res, next) => {
 }
 
 module.exports.validateProduct = async (req, res, next) => {
-    console.log(productSchema.validate(req.body))
     const { error } = productSchema.validate(req.body);
-
     if (error) {
         const msg = error.details.map(el => el.message).join(',')
         console.log('error')
         next(new ExpressError(msg, 400))
     } else {
-        console.log('no error')
         next();
     }
 

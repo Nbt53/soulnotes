@@ -6,8 +6,13 @@ const productSchema = new Schema({
     name: String,
     price: Number,
     image: String,
-    qty:Number
+    qty: Number,
+    notes: [
+        {
+            note: String
+        }
+    ]
 
 })
-    
-    module.exports = mongoose.model('Product', productSchema)
+
+module.exports = mongoose.model('Product', productSchema)

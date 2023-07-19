@@ -26,10 +26,17 @@ const Joi = BaseJoi.extend(extension)
 
 module.exports.productSchema = Joi.object({
     product: Joi.object({
-    name: Joi.string().required().alphanum(),
-    price: Joi.number().required().min(0),
-    image: Joi.string().required(),
-    qty: Joi.number().required().min(0)
+        name: Joi.string().required().alphanum(),
+        price: Joi.number().required().min(0),
+        image: Joi.string().required(),
+        qty: Joi.number().required().min(0),
+        description: Joi.string(),
+        notes: Joi.array().items(
+            Joi.object({
+                note: Joi.string().required(),
+
+            })
+        ).required().min(3).max(3)
     }).required()
 })
 

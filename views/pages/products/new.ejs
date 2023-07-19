@@ -5,7 +5,7 @@
 
             <label for="name" class="contact__form-label">product name</label>
             <input type="text" class="contact__form-input" id="name" name="product[name]" required>
-            
+
             <!-- need to add image upload -->
             <label for="image" class="contact__form-label">image</label>
             <input type="text" class="contact__form-input" id="image" name="product[image]" required>
@@ -13,8 +13,17 @@
             <input type="number" class="contact__form-input" id="price" name="product[price]" required>
             <label for="qty" class="contact__form-label">qty</label>
             <input type="number" class="contact__form-input" id="qty" name="product[qty]" required>
+            <label for="description" class="contact__form-label">Description</label>
+            <textarea type="text" class="contact__form-input" id="description" name="product[description]" required>
+                A brief description</textarea>
 
+            <div class="notes" style="border: 1px solid gold;">
+                <label for="notes" class="contact__form-label" style="display: block;">Notes</label>
+                <input type="string" class="contact__form-input" id="note" name="product[noteOne]" required>
+                <input type="string" class="contact__form-input" id="note" name="product[noteTwo]" required>
+                <input type="string" class="contact__form-input" id="note" name="product[noteThree]" required>
+            </div>
 
             <button class="btn btn-form">submit</button>
-        </form>product[
+        </form>
     </section>

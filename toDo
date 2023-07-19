@@ -3,11 +3,14 @@ fixing joi
 next
  
 
+
 set up database
     -decide where to store the database
 
+
 set up reviews  
     -make so add to user
+
 
 set up models:
     -customer
@@ -15,19 +18,24 @@ set up models:
     -contact
     -comment
 
+
 set up image database
-    -cloudinary? 
+    -cloudinary?
     -aws?
+
 
 set up security
     -set up server side validation for admin
-    -sanitize( need to make it work properly)
+    -sanitise( need to make it work properly)
+
 
 middleware
 -set up flash
 
-set up error handling 
+
+set up error handling
     - other errors?
+
 
 fix designs
     -cards
@@ -36,17 +44,26 @@ fix designs
     -font in home about section
     -product show title
 
+
 fix bugs
-    -does sanitize work
+    -does sanitise work
     -buttons on product show cards
     -sort out redirect routes
     -nav bar off the bottom and  space at the top
-    -logo on product page over lapping images
+    -logo on product page overlapping images
+
 
 areas not happy with
     -contact needs more text    
     -add a landing page
+         -Try b&w photo zoomed in
+
 
 media queries
     - small phone
        ~padding on home page    
+
+
+
+
+
