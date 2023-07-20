@@ -400,6 +400,29 @@ h4 {
   width: 100%;
 }
 
+.shipping {
+  width: 100%;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-top: 10rem;
+  font-weight: 600;
+  letter-spacing: 6px;
+}
+.shipping__info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+.shipping__info-item {
+  margin-bottom: 7rem;
+}
+.shipping ion-icon {
+  scale: 2;
+  margin-bottom: 2rem;
+}
+
 .header {
   width: 100%;
 }
@@ -465,7 +488,7 @@ h4 {
   top: 0;
   width: 100%;
   height: 100%;
-  padding-top: 2rem;
+  padding: 3rem;
 }
 .home-story__video {
   position: relative;
