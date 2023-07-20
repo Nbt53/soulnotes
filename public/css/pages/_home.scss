@@ -7,6 +7,12 @@
         width: 90%;
         margin-top: -10rem;
         margin-bottom: 4rem;
+
+        @include respond(tab-land) {
+            width: auto;
+            height: 90vh;
+            margin: 0 auto;
+        }
     }
 }
 
@@ -37,6 +43,17 @@
         left: 1rem;
     }
 
+    @include respond(tab-port) {
+        height: 75rem;
+
+        &__text {
+            top: 10rem;
+
+            .btn-section {
+                font-size: 5rem;
+            }
+        }
+    }
 
 }
 
@@ -79,5 +96,24 @@
         text-align: center;
         font-weight: 500;
         padding: 2rem $padding-large;
+    }
+
+    @include respond(tab-port) {
+        width: 80%;
+        margin: 10rem auto;
+
+
+        &__video {
+            width: 100%;
+        }
+
+        &__text {
+            font-size: 3.3rem;
+        }
+
+        .title-about {
+            font-size: 10rem;
+            margin-top: 3rem;
+        }
     }
 }

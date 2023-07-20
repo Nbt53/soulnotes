@@ -123,4 +123,36 @@
             }
         }
     }
+
+    @include respond(tab-port) {
+        flex-direction: row;
+        height: 10rem;
+        width: 100%;
+        left: 0;
+        justify-content: space-between;
+
+        &__container {
+            display: block;
+        }
+
+        &__hamburger {
+            display: none;
+        }
+
+        &__icon {
+            display: none;
+        }
+
+        &__links {
+            flex-direction: row;
+
+            &-top {
+                margin-bottom: unset;
+            }
+        }
+
+        &__items {
+            margin: 2rem 1rem;
+        }
+    }
 }

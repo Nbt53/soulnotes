@@ -1,61 +1,62 @@
 <nav class="nav__container">
-  <a href="/" class="link">
 
 
-    <% if(currentPage !='home' ) {%>
+
+  <% if(currentPage !='home' ) {%>
+    <a href="/" class="link">
       <!-- turn off nav icon if home page -->
       <img src="/img/logo-transparent.png" alt="soul notes logo with link to home" class="nav__icon">
-  </a>
-  <% } %>
+    </a>
+    <% } %>
 
 
-    <div class="nav">
-      <ul class="nav__links nav__links-top">
-        <li class="nav__items <%= currentPage === 'home' ? 'u-underline' : '' %>">
-          <a href="/" class="nav__link">Home</a>
-        </li>
-        <li class="nav__items <%= currentPage === 'about' ? 'u-underline' : '' %>">
-          <a href="/about" class="nav__link">About</a>
-        </li>
-        <li class="nav__items <%= currentPage === 'products' ? 'u-underline' : '' %>">
-          <a href="/products" class="nav__link">Our Products</a>
-        </li>
-        <li class="nav__items <%= currentPage === 'contact' ? 'u-underline' : '' %>">
-          <a href="/contact" class="nav__link">Contact</a>
-        </li>
-      </ul>
-
-      <ul class="nav__links">
-        </li>
-        <li class="nav__items <%= currentPage === 'basket' ? 'u-underline' : '' %>">
-          <a href="" class="nav__link">Basket</a>
-        </li>
-
-
-        <% if(!currentUser){ %>
-          <li class="nav__items <%= currentPage === 'signup' ? 'u-underline' : '' %>">
-            <a href="/user/signup" class="nav__link">Sign up</a>
+      <div class="nav">
+        <ul class="nav__links nav__links-top">
+          <li class="nav__items <%= currentPage === 'home' ? 'u-underline' : '' %>">
+            <a href="/" class="nav__link">Home</a>
           </li>
-          <li class="nav__items <%= currentPage === 'login' ? 'u-underline' : '' %>">
-            <a href="/user/login" class="nav__link">Log in</a>
+          <li class="nav__items <%= currentPage === 'about' ? 'u-underline' : '' %>">
+            <a href="/about" class="nav__link">About</a>
           </li>
-          <% }else{ %>
-            <li class="nav__items">
-              <a href="/user/logout" class="nav__link">Log out</a>
+          <li class="nav__items <%= currentPage === 'products' ? 'u-underline' : '' %>">
+            <a href="/products" class="nav__link">Our Products</a>
+          </li>
+          <li class="nav__items <%= currentPage === 'contact' ? 'u-underline' : '' %>">
+            <a href="/contact" class="nav__link">Contact</a>
+          </li>
+        </ul>
+
+        <ul class="nav__links">
+          </li>
+          <li class="nav__items <%= currentPage === 'basket' ? 'u-underline' : '' %>">
+            <a href="" class="nav__link">Basket</a>
+          </li>
+
+
+          <% if(!currentUser){ %>
+            <li class="nav__items <%= currentPage === 'signup' ? 'u-underline' : '' %>">
+              <a href="/user/signup" class="nav__link">Sign up</a>
             </li>
-            <% } %>
-      </ul>
-    </div>
+            <li class="nav__items <%= currentPage === 'login' ? 'u-underline' : '' %>">
+              <a href="/user/login" class="nav__link">Log in</a>
+            </li>
+            <% }else{ %>
+              <li class="nav__items">
+                <a href="/user/logout" class="nav__link">Log out</a>
+              </li>
+              <% } %>
+        </ul>
+      </div>
 
 
-    <div class="nav__hamburger">
-      <div class="nav__hamburger-line nav__hamburger-line-1"></div>
-      <div class="nav__hamburger-line nav__hamburger-line-2"></div>
-      <div class="nav__hamburger-line nav__hamburger-line-3"></div>
-    </div>
+      <div class="nav__hamburger">
+        <div class="nav__hamburger-line nav__hamburger-line-1"></div>
+        <div class="nav__hamburger-line nav__hamburger-line-2"></div>
+        <div class="nav__hamburger-line nav__hamburger-line-3"></div>
+      </div>
 
-    <div class="nav__hamburger-container">
-    </div>
+      <div class="nav__hamburger-container">
+      </div>
 
 
 </nav>

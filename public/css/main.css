@@ -185,6 +185,33 @@ h4 {
 .nav__hamburger-line-3 {
   bottom: 1.5rem;
 }
+@media (min-width: 56.25em) {
+  .nav {
+    flex-direction: row;
+    height: 10rem;
+    width: 100%;
+    left: 0;
+    justify-content: space-between;
+  }
+  .nav__container {
+    display: block;
+  }
+  .nav__hamburger {
+    display: none;
+  }
+  .nav__icon {
+    display: none;
+  }
+  .nav__links {
+    flex-direction: row;
+  }
+  .nav__links-top {
+    margin-bottom: unset;
+  }
+  .nav__items {
+    margin: 2rem 1rem;
+  }
+}
 
 .btn {
   border: none;
@@ -383,6 +410,13 @@ h4 {
   margin-top: -10rem;
   margin-bottom: 4rem;
 }
+@media (min-width: 75em) {
+  .header__logo {
+    width: auto;
+    height: 90vh;
+    margin: 0 auto;
+  }
+}
 
 .home-products {
   display: flex;
@@ -406,6 +440,17 @@ h4 {
   position: absolute;
   top: 2rem;
   left: 1rem;
+}
+@media (min-width: 56.25em) {
+  .home-products {
+    height: 75rem;
+  }
+  .home-products__text {
+    top: 10rem;
+  }
+  .home-products__text .btn-section {
+    font-size: 5rem;
+  }
 }
 
 .home-story {
@@ -443,6 +488,22 @@ h4 {
   text-align: center;
   font-weight: 500;
   padding: 2rem 3rem;
+}
+@media (min-width: 56.25em) {
+  .home-story {
+    width: 80%;
+    margin: 10rem auto;
+  }
+  .home-story__video {
+    width: 100%;
+  }
+  .home-story__text {
+    font-size: 3.3rem;
+  }
+  .home-story .title-about {
+    font-size: 10rem;
+    margin-top: 3rem;
+  }
 }
 
 .product {
