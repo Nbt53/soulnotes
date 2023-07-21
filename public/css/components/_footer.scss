@@ -53,8 +53,27 @@
         }
     }
 
+    &__items {
+        margin: 3rem;
+        transition: all .2s;
+
+        &-item {
+            font-size: 2rem;
+        }
+
+        &-sub {
+            display: none;
+            font-size: 1.2rem;
+            text-transform: capitalize;
+            background-color: #80808033;
+            padding: 1rem;
+
+        }
+    }
+
     .copyright {
         align-self: flex-end;
         margin-top: 1rem;
+        font-size: 1.2rem;
     }
 }

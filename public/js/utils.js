@@ -12,6 +12,11 @@ module.exports.playVideo = () => {
   }
 }
 
+module.exports.openAccordion = (element) => {
+
+}
+
+
 //   <script>
 //   <div id="log-output"></div>
 // function log(message) {

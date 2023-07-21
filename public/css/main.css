@@ -73,12 +73,12 @@ h4 {
   font-family: "Dosis", sans-serif;
 }
 .credit-link {
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   transition: all 0.2s;
 }
 .credit-link:hover {
   color: #94804e;
-  font-size: 1.6rem;
+  font-size: 2.6rem;
 }
 
 .nav {
@@ -323,9 +323,24 @@ h4 {
 .footer__links-link:link:not(:last-child), .footer__links-link:visited:not(:last-child) {
   margin-bottom: 1rem;
 }
+.footer__items {
+  margin: 3rem;
+  transition: all 0.2s;
+}
+.footer__items-item {
+  font-size: 2rem;
+}
+.footer__items-sub {
+  display: none;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  background-color: rgba(128, 128, 128, 0.2);
+  padding: 1rem;
+}
 .footer .copyright {
   align-self: flex-end;
   margin-top: 1rem;
+  font-size: 1.2rem;
 }
 
 .card {
