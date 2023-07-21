@@ -21,6 +21,7 @@
         justify-content: space-around;
         font-size: 1.8rem;
         margin-bottom: 2rem;
+        margin-top: 2rem;
 
 
         &-link:link,
@@ -65,7 +66,7 @@
             display: none;
             font-size: 1.2rem;
             text-transform: capitalize;
-            background-color: #80808033;
+            background-image: radial-gradient(#80808033, rgba(255, 255, 255, 0) 70%) ;
             padding: 1rem;
 
         }

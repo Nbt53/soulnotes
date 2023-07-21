@@ -301,6 +301,7 @@ h4 {
   justify-content: space-around;
   font-size: 1.8rem;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 .footer__socials-link:link, .footer__socials-link:visited {
   text-decoration: none;
@@ -334,7 +335,7 @@ h4 {
   display: none;
   font-size: 1.2rem;
   text-transform: capitalize;
-  background-color: rgba(128, 128, 128, 0.2);
+  background-image: radial-gradient(rgba(128, 128, 128, 0.2), rgba(255, 255, 255, 0) 70%);
   padding: 1rem;
 }
 .footer .copyright {
