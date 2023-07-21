@@ -336,7 +336,6 @@ h4 {
   display: none;
   font-size: 1.2rem;
   text-transform: capitalize;
-  background-image: radial-gradient(rgba(128, 128, 128, 0.2), rgba(255, 255, 255, 0) 70%);
   padding: 1rem;
 }
 .footer .copyright {
