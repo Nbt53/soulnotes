@@ -35,4 +35,14 @@
         border-radius: 20px;
         box-shadow: $shadow-1;
     }
+
+    .card{
+        border: none;
+
+        &-text{
+            text-transform: none;
+            margin: unset;
+        }
+        
+    }
 }

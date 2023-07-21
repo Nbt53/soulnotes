@@ -585,6 +585,13 @@ h4 {
   border-radius: 20px;
   box-shadow: #bda670 1px 1px 1rem;
 }
+.about .card {
+  border: none;
+}
+.about .card-text {
+  text-transform: none;
+  margin: unset;
+}
 
 .error {
   height: 50vh;
