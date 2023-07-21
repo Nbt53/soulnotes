@@ -286,6 +286,7 @@ h4 {
   background-color: rgb(39, 37, 37);
   color: inherit;
   padding: 2rem;
+  padding-bottom: 0;
   text-transform: uppercase;
   text-align: center;
 }
