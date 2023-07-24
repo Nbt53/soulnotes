@@ -4,7 +4,7 @@ function initMap() {
     const CONFIGURATION = {
         "ctaTitle": "Checkout",
         "mapOptions": { "center": { "lat": 37.4221, "lng": -122.0841 }, "fullscreenControl": true, "mapTypeControl": false, "streetViewControl": true, "zoom": 11, "zoomControl": true, "maxZoom": 22, "mapId": "" },
-        "mapsApiKey": "AIzaSyC95BNQipbyXPPNGs_wmFPMgzD7ihzLGaY",
+        "mapsApiKey":  process.env.MAPS_KEY,
         "capabilities": { "addressAutocompleteControl": true, "mapDisplayControl": false, "ctaControl": false }
     };
     const componentForm = [
