@@ -96,7 +96,7 @@ passport.deserializeUser(User.deserializeUser());
 //// session
 app.use((req, res, next) => {
   res.locals.currentUser = req.user;
-  
+   
   next();
 })
 

@@ -3,36 +3,33 @@
     <section class="signUp">
         <form action="/user" method="POST" class="contact__form">
 
-        
-            <input type="text" class="contact__form-input" id="firstName" name="firstName" placeholder="First Name">
-            <input type="text" class="contact__form-input" id="lastName" name="lastName" placeholder="Last Name">
 
-            <div class="address">
-                <p class="contact__form-label">Address</p>
+            <input type="text" class="contact__form-input" id="firstName" name="firstName" placeholder="First Name"
+                required>
+            <input type="text" class="contact__form-input" id="lastName" name="lastName" placeholder="Last Name"
+                required>
 
-                <input type="text" placeholder="Address" id="location-input" class="contact__form-input"
-                    name="address[lineOne]" />
-                <input type="text" placeholder="Apt, Suite, etc (optional)" class="contact__form-input"
-                    name="address[lineTwo]" />
-                <input type="text" placeholder="City" id="administrative_area_level_2-input" class="contact__form-input"
-                    name="address[city]" />
-                <input type="text" placeholder="Zip/Postal code" id="postal_code-input" class="contact__form-input"
-                    name="address[postcode]" />
-                <input type="text" placeholder="Country" id="country-input" class="contact__form-input"
-                    name="address[country]" />
+            <input type="text" placeholder="Address" id="location-input" class="contact__form-input"
+                name="address[lineOne]" required />
+            <input type="text" placeholder="Apt, Suite, etc (optional)" class="contact__form-input"
+                name="address[lineTwo]"  />
+            <input type="text" placeholder="City" id="administrative_area_level_2-input" class="contact__form-input"
+                name="address[city]" required />
+            <input type="text" placeholder="Zip/Postal code" id="postal_code-input" class="contact__form-input"
+                name="address[postcode]" required />
+            <input type="text" placeholder="Country" id="country-input" class="contact__form-input"
+                name="address[country]" required />
 
-            </div>
-<!-- 
-            <label for="password" class="contact__form-label">Password</label> -->
-            <input type="password" class="contact__form-input" id="password" name="password" placeholder="Password">
+            <input type="password" class="contact__form-input" id="password" name="password" placeholder="Password"
+                required>
 
-            <!-- <label for="email" class="contact__form-label">e-mail</label> -->
-            <input type="email" class="contact__form-input" id="email" name="email" placeholder="E-Mail">
+            <input type="email" class="contact__form-input" id="email" name="email" placeholder="E-Mail" required>
 
             <div class="priv">
-                <label for="checkbox"> Please read our <a href="/privacy" class="link" target="_blank">privacy
+                <label for="checkbox" > Please read our <a href="/privacy" class="link"
+                        target="_blank">privacy
                         statement</a></label>
-                <input type="checkbox">
+                <input type="checkbox" id="privacyCheck" required>
             </div>
             <div class="opt">
                 <label for="optIn">check here to receive promotional email from us</label>
@@ -46,12 +43,12 @@
                 // No need to do anything here, as we are not using the map visualization.
             }
         </script>
-         <script src="/js/autocomplete.js"></script>
+        <script src="/js/autocomplete.js"></script>
         <script
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC95BNQipbyXPPNGs_wmFPMgzD7ihzLGaY&libraries=places&callback=initMap&solution_channel=GMP_QB_addressselection_v1_cA"
             async defer></script>
         </body>
-       
-   
+
+
 
         </html>

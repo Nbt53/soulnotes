@@ -19,6 +19,11 @@
             font-family: inherit;
             border: none;
             outline: none;
+            border-bottom: 0.5rem solid green;
+
+            &:not(:valid){
+                border-bottom: 0.5rem solid red;
+            }
 
             &:not(:last-child) {
                 margin-bottom: 2rem;
