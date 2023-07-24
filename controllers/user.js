@@ -6,15 +6,16 @@ module.exports.renderSignUp = (req, res) => {
 
 module.exports.submitUser = async (req, res) => {
     req.body.username = req.body.email
-    if (req.body.admin === 'on') {
-        req.body.admin = true
+    if (req.body.optIn === 'on') {
+        req.body.optIn = true
     } else {
-        req.body.admin = false
+        req.body.optIn = false
     }
     try {
-        const { name, email, password, username, admin } = req.body;
-        const newUser = new User({ username, email, name, admin });
+        const { name, email, address,  password, username, optIn } = req.body;
+        const newUser = new User({ username, address, email, name, optIn });
         const registeredUser = await User.register(newUser, password);
+
         req.login(registeredUser, err => {
             if (err) return next(err);
             res.redirect('/')

@@ -4,7 +4,8 @@ module.exports.scriptSrcUrls = [
     "https://cdnjs.cloudflare.com/",
     "https://cdn.jsdelivr.net/",
     "https://res.cloudinary.com/djj2nhj8d/",
-    "https://i.imgur.com"
+    "https://i.imgur.com",
+    "https://maps.googleapis.com/"
 
 ];
 module.exports.styleSrcUrls = [
@@ -13,7 +14,8 @@ module.exports.styleSrcUrls = [
 ];
 module.exports.connectSrcUrls = [
     "https://unpkg.com",
-    "https://res.cloudinary.com/djj2nhj8d/"
+    "https://res.cloudinary.com/djj2nhj8d/",
+    "https://maps.googleapis.com/"
 ];
 module.exports.fontSrcUrls =
     ["https://res.cloudinary.com/djj2nhj8d/",

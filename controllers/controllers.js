@@ -14,3 +14,7 @@ module.exports.submitContact = (req, res) => {
 module.exports.renderAbout = (req, res) => {
     res.render('pages/about', { currentPage: 'about' })
 }
+
+module.exports.renderPrivacy = (req, res) =>{
+    res.render('pages/privacy', { currentPage: 'none' } )
+}
