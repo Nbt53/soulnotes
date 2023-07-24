@@ -3,36 +3,31 @@
     <section class="signUp">
         <form action="/user" method="POST" class="contact__form">
 
-            <label for="firstName" class="contact__form-label">First Name</label>
-            <input type="text" class="contact__form-input" id="firstName" name="firstName">
-
-            <label for="lastName" class="contact__form-label">Surname</label>
-            <input type="text" class="contact__form-input" id="lastName" name="lastName">
+        
+            <input type="text" class="contact__form-input" id="firstName" name="firstName" placeholder="First Name">
+            <input type="text" class="contact__form-input" id="lastName" name="lastName" placeholder="Last Name">
 
             <div class="address">
                 <p class="contact__form-label">Address</p>
 
-                <label for="address[lineOne]" class="contact__form-label">house name/number</label>
-                <input type="text" class="contact__form-input" id="address[lineOne]" name="address[lineOne]">
+                <input type="text" placeholder="Address" id="location-input" class="contact__form-input"
+                    name="address[lineOne]" />
+                <input type="text" placeholder="Apt, Suite, etc (optional)" class="contact__form-input"
+                    name="address[lineTwo]" />
+                <input type="text" placeholder="City" id="administrative_area_level_2-input" class="contact__form-input"
+                    name="address[city]" />
+                <input type="text" placeholder="Zip/Postal code" id="postal_code-input" class="contact__form-input"
+                    name="address[postcode]" />
+                <input type="text" placeholder="Country" id="country-input" class="contact__form-input"
+                    name="address[country]" />
 
-                <label for="address[lineTwo]" class="contact__form-label">street</label>
-                <input type="text" class="contact__form-input" id="address[lineTwo]" name="address[lineTwo]">
-
-                <label for="address[city]" class="contact__form-label">City</label>
-                <input type="text" class="contact__form-input" id="address[city]" name="address[city]">
-
-                <label for="address[postcode]" class="contact__form-label">postcode</label>
-                <input type="text" class="contact__form-input" id="address[postcode]" name="address[postcode]">
-
-                <label for="address[country]" class="contact__form-label">country</label>
-                <input type="text" class="contact__form-input" id="address[country]" name="address[country]">
             </div>
+<!-- 
+            <label for="password" class="contact__form-label">Password</label> -->
+            <input type="password" class="contact__form-input" id="password" name="password" placeholder="Password">
 
-            <label for="password" class="contact__form-label">Password</label>
-            <input type="password" class="contact__form-input" id="password" name="password">
-
-            <label for="email" class="contact__form-label">e-mail</label>
-            <input type="email" class="contact__form-input" id="email" name="email">
+            <!-- <label for="email" class="contact__form-label">e-mail</label> -->
+            <input type="email" class="contact__form-input" id="email" name="email" placeholder="E-Mail">
 
             <div class="priv">
                 <label for="checkbox"> Please read our <a href="/privacy" class="link" target="_blank">privacy
@@ -46,44 +41,17 @@
 
             <button class="btn btn-form">submit</button>
         </form>
-
-        <script>
-            // Set up Autocomplete for postcode input
-            function initAutocomplete() {
-                const postcodeInput = document.getElementById("address[postcode]");
-                const options = {
-                    types: ["postal_code"], // Limit suggestions to postal codes only
-                };
-                const autocomplete = new google.maps.places.Autocomplete(postcodeInput, options);
-                console.log('Autocomplete added');
-            }
-        </script>
-
-        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap" async
-            defer></script>
-
         <script>
             function initMap() {
                 // No need to do anything here, as we are not using the map visualization.
             }
         </script>
-        <!-- 
-        <script>   function initMap() {
-            // No need to do anything here, as we are not using the map visualization.
-        }</script>
-    <script async
-        src="https://maps.googleapis.com/maps/api/js?key=<%= process.env.MAPS_KEY %>&libraries=places&callback=initMap">
-        </script>
-        <script>
-            // Set up Autocomplete for postcode input
-            function initAutocomplete() {
-                const postcodeInput = document.getElementById("address[postcode]");
-                const options = {
-                    types: ["postal_code"], // Limit suggestions to postal codes only
-                };
-                const autocomplete = new google.maps.places.Autocomplete(postcodeInput, options);
-                console.log('added')
-            }
+         <script src="/js/autocomplete.js"></script>
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC95BNQipbyXPPNGs_wmFPMgzD7ihzLGaY&libraries=places&callback=initMap&solution_channel=GMP_QB_addressselection_v1_cA"
+            async defer></script>
+        </body>
+       
+   
 
-            initAutocomplete()
-        </script> -->
+        </html>

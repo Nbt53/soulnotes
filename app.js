@@ -49,7 +49,8 @@ app.use(
         "blob:",
         "data:",
         "https://res.cloudinary.com/djj2nhj8d/",
-        "https://images.unsplash.com/"
+        "https://images.unsplash.com/",
+        "https://maps.gstatic.com"
       ],
       fontSrc: ["'self'", ...fontSrcUrls],
       mediaSrc: ["'self'", "https://res.cloudinary.com/dv5vm4sqh/", ...scriptSrcUrls],
