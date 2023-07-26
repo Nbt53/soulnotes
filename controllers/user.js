@@ -12,8 +12,8 @@ module.exports.submitUser = async (req, res) => {
         req.body.optIn = false
     }
     try {
-        const { name, email, address,  password, username, optIn } = req.body;
-        const newUser = new User({ username, address, email, name, optIn });
+        const { firstName, lastName, email, address, password, username, optIn } = req.body;
+        const newUser = new User({ username, address, email, firstName, lastName, optIn });
         const registeredUser = await User.register(newUser, password);
 
         req.login(registeredUser, err => {
@@ -43,4 +43,18 @@ module.exports.logout = (req, res) => {
         }
         res.redirect('/');
     });
+}
+
+module.exports.renderUserEdit = async (req, res) => {
+    const id = req.params.id
+    const user = await User.findById(id)
+    res.render('pages/users/edit', { currentPage: 'userEdit', user })
+}
+
+module.exports.updateUser = async (req, res) => {
+
+    const updatedUser = req.body
+    const user = await User.findOne({ username: updatedUser.email })
+    await User.findByIdAndUpdate(user._id, updatedUser)
+    res.redirect(`user/edit/${user._id}`)
 }

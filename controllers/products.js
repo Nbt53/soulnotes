@@ -49,3 +49,4 @@ module.exports.updateProduct = async (req, res) => {
     await Product.findByIdAndUpdate(product, updatedProduct);
     res.redirect('/products');
 }
+

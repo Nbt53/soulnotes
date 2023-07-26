@@ -1,8 +1,8 @@
 current
-Stripe 
+redo product models and show
 
 next
- Product cards
+Stripe
 
 
 set up database
@@ -20,14 +20,8 @@ set up models:
     -comment
 
 
-set up image database
-    -cloudinary?
-    -aws?
-
-
 set up security
-    -set up server side validation for admin
-    -sanitise( need to make it work properly)
+    -change admin to just soulnotesboss@gmail.com
 
 
 middleware

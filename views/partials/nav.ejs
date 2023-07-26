@@ -40,7 +40,11 @@
             <li class="nav__items <%= currentPage === 'login' ? 'u-underline' : '' %>">
               <a href="/user/login" class="nav__link">Log in</a>
             </li>
+
             <% }else{ %>
+              <li class="nav__items <%= currentPage === 'editUser' ? 'u-underline' : '' %>">
+                <a href="/user/edit/<%= currentUser._id %>" class="nav__link">edit details</a>
+              </li>
               <li class="nav__items">
                 <a href="/user/logout" class="nav__link">Log out</a>
               </li>
