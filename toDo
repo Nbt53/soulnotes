@@ -42,24 +42,16 @@ fix designs
 
 fix bugs
     -does sanitise work
-    -buttons on product show cards
     -sort out redirect routes
-    -nav bar off the bottom and  space at the top
-    -logo on product page overlapping images
-
-
+   
 areas not happy with
-    -contact needs more text    
+    -contact needs to be removed?  
     -add a landing page
          -Try b&w photo zoomed in
-
 
 media queries
     - small phone
        ~padding on home page    
-
-
-
 
 to add to models
 
@@ -68,4 +60,5 @@ name
 notes
 description
 price
-
+qty
+img

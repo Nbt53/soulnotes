@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="card-btn">
-                    <% if(currentUser && currentUser.admin===true){ %>
+                    <% if(currentUser && currentUser.username === 'soulnotesboss@gmail.com'){ %>
                         <form action="/products/<%= product.name %>?_method=DELETE" class="card-delete" method="POST">
                             <button class="btn card__btn-btn btn-card">
                                 Delete

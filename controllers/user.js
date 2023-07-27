@@ -33,7 +33,8 @@ module.exports.renderLogin = (req, res) => {
 }
 
 module.exports.login = (req, res) => {
-    res.redirect('/')
+    const returnTo = res.locals.prevURL || '/';
+    res.redirect(returnTo);
 }
 
 module.exports.logout = (req, res) => {
@@ -41,7 +42,8 @@ module.exports.logout = (req, res) => {
         if (err) {
             return next(err);
         }
-        res.redirect('/');
+        const returnTo = res.locals.prevURL || '/';
+        res.redirect(returnTo);
     });
 }
 

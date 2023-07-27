@@ -96,7 +96,13 @@ passport.deserializeUser(User.deserializeUser());
 //// session
 app.use((req, res, next) => {
   res.locals.currentUser = req.user;
-   
+  if (req.originalUrl != '/user/login') {
+    const prevURL = req.session.prevURL || '/';
+    req.session.prevURL = req.originalUrl;
+    res.locals.prevURL = prevURL;
+  }
+
+
   next();
 })
 

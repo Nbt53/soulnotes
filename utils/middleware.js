@@ -3,16 +3,17 @@ const ExpressError = require('../utils/ExpressError')
 
 module.exports.isLoggedIn = (req, res, next) => {
     if (!req.isAuthenticated()) {
-        res.redirect('/user/login')
+        res.redirect('/user/login');
     }
     next()
 }
 
-module.exports.isAdmin = (req, res, next) => {
-    if (req.isAuthenticated() && req.user.admin === true) {
-        next()
+module.exports.isAdmin = async (req, res, next) => {
+    if (req.isAuthenticated() && req.user.username === 'soulnotesboss@gmail.com') {
+        next();
     } else {
-        res.redirect('/')
+        const returnTo = res.locals.prevURL || '/';
+        res.redirect(returnTo);
     }
 
 }
