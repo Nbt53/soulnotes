@@ -23,15 +23,18 @@
                                 <% } %>
                     </div>
                     <div class="card-item card-text">
-                        Notes: blah blah blah <br>
-                        suitable for: blah blah blah <br>
-                        blah: blah blah blah
+                        Notes: <br><br>
+                        <%= product.notesOne %><br>
+                            <%= product.notesTwo %><br>
+                                <%= product.notesThree %><br>
+
                     </div>
+              
                 </div>
             </div>
 
             <% }); %>
-                <% if(currentUser && currentUser.username === 'soulnotesboss@gmail.com'){ %>
+                <% if(currentUser && currentUser.username==='soulnotesboss@gmail.com' ){ %>
                     <div class="admin">
                         <button class="btn btn-primary"><a href="/products/new" class="link">add product</a> </button>
 

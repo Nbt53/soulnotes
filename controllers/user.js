@@ -29,12 +29,13 @@ module.exports.submitUser = async (req, res) => {
 }
 
 module.exports.renderLogin = (req, res) => {
-    res.render('pages/users/login', { currentPage: 'login' })
+    const returnTo = req.session.prevURL;
+    console.log(returnTo)
+    res.render('pages/users/login', { currentPage: 'login', returnTo })
 }
 
 module.exports.login = (req, res) => {
-    const returnTo = res.locals.prevURL || '/';
-    res.redirect(returnTo);
+    res.redirect(req.body.returnTo);
 }
 
 module.exports.logout = (req, res) => {

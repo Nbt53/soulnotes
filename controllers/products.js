@@ -11,9 +11,10 @@ module.exports.renderProductNew = (req, res) => {
 }
 
 module.exports.submitProduct = async (req, res) => {
-    const { name, image, price, qty } = req.body;
-    const product = await new Product({ name, image, price, qty });
+    const { name, image, price, qty, notesOne, notesTwo, notesThree, description } = req.body.product;
+    const product = await new Product({ name, image, price, qty, notesOne, notesTwo, notesThree, description });
     product.save();
+    console.log(product)
     console.log('product saved')
     res.redirect('/products');
 }
@@ -42,7 +43,7 @@ module.exports.renderEditProduct = async (req, res) => {
 }
 
 module.exports.updateProduct = async (req, res) => {
-    const updatedProduct = req.body;
+    const updatedProduct = req.body.product;
     const productName = req.params.id;
     let product = await Product.find({ name: productName });
     product = product[0]._id;

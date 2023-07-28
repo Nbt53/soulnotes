@@ -6,8 +6,7 @@
     position: relative;
     top: 0;
     left: -70%;
-    padding: 1rem;
-    // justify-content: space-between;
+    padding: 5rem;
     align-items: center;
     text-align: center;
     background-color: rgba($color-gray-light-1, 0.95);
@@ -48,6 +47,10 @@
 
         &-top {
             margin-bottom: 100%;
+        }
+
+        &-bottom {
+            margin-top: auto;
         }
     }
 

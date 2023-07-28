@@ -7,12 +7,12 @@ const productSchema = new Schema({
     price: Number,
     image: String,
     qty: Number,
-    description: [
-        {
-            description: String,
-            note: String
-        }
-    ]
+    description: String,
+    notesOne: String,
+    notesTwo: String,
+    notesThree: String,
+
+
 
 })
 

@@ -6,10 +6,10 @@
 
             <div class="card">
                 <div class="card-header">
-                    <a href="/products/<%= product.name %>" class="link card-title">
+                    <div href="/products/<%= product.name %>" class="card-title product__title u-mb-lrg">
                         <%= product.name %>
-                    </a>
-                    <img src="/<%= product.image %>" alt="" class="card-img">
+                    </div>
+                    <img src="<%= product.image %>" alt="" class="card-img">
 
                 </div>
                 <div class="card-body">
@@ -18,19 +18,14 @@
                     <div class="card-item">
                         <%= product.qty %> left in stock
                     </div>
-                    <div class="card-item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nobis,
-                        quibusdam dolor voluptatem necessitatibus laudantium cumque? Placeat molestiae voluptas
-                        consectetur.
-                        Eos, nulla non et deleniti laborum qui vitae molestiae aliquam!
-                        Maxime dolore illo omnis expedita. Saepe et rem delectus incidunt nam deserunt officiis qui
-                        eveniet
-                        commodi quaerat, harum esse molestiae iure aspernatur enim velit vero minima asperiores fugiat
-                        eius
-                        ipsa?</div>
+                    <div class="card-item"><%= product.description %></div>
+                    <div class="card-item"><%= product.notesOne %></div>
+                    <div class="card-item"><%= product.notesTwo %></div>
+                    <div class="card-item"><%= product.notesThree %></div>
                 </div>
 
                 <div class="card-btn">
-                    <% if(currentUser && currentUser.username === 'soulnotesboss@gmail.com'){ %>
+                    <% if(currentUser && currentUser.username==='soulnotesboss@gmail.com' ){ %>
                         <form action="/products/<%= product.name %>?_method=DELETE" class="card-delete" method="POST">
                             <button class="btn card__btn-btn btn-card">
                                 Delete
