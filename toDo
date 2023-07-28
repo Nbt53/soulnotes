@@ -1,5 +1,5 @@
 current
-redo product models and show
+
 
 next
 Stripe
@@ -21,7 +21,7 @@ set up models:
 
 
 set up security
-    -change admin to just soulnotesboss@gmail.com
+sort out permissions on google maps
 
 
 middleware
@@ -29,29 +29,24 @@ middleware
 
 
 set up error handling
-    - other errors?
+    
 
 
 fix designs
-    -cards
-    -try changing transparency rather than display on nav logo
-    -single product show should look wider and bigger(for pc)
-    -font in home about section
-    -product show title
-
+line spacing on card description
 
 fix bugs
     -does sanitise work
-    -sort out redirect routes
    
 areas not happy with
-    -contact needs to be removed?  
+
     -add a landing page
          -Try b&w photo zoomed in
 
 media queries
     - small phone
-       ~padding on home page    
+     
+       
 
 to add to models
 

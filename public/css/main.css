@@ -411,6 +411,23 @@ h4 {
   display: flex;
   flex-direction: row;
 }
+@media (min-width: 56.25em) {
+  .card .card-img {
+    width: 50vw;
+  }
+  .card .card-title {
+    font-size: 3.5rem;
+    letter-spacing: 5px;
+  }
+  .card .card-text {
+    font-size: 2.3rem;
+    line-height: 3.4rem;
+  }
+  .card .card-item {
+    font-size: 2.3rem;
+    line-height: 3.4rem;
+  }
+}
 
 .slideshow {
   width: 100%;

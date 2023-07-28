@@ -66,4 +66,29 @@
             flex-direction: row;
         }
     }
+
+    @include respond(tab-port) {
+        .card{
+            &-img {
+                width: 50vw;
+            }
+
+            &-title{
+                font-size: 3.5rem;
+                letter-spacing: 5px;
+            }
+
+            &-text{
+                font-size: 2.3rem;
+                line-height: 3.4rem;
+            }
+
+            &-item{
+                font-size: 2.3rem;
+                line-height: 3.4rem;
+            }
+        
+        }
+    }
 }
+
