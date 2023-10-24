@@ -131,6 +131,11 @@ h4 {
 .nav__links-bottom {
   margin-top: auto;
 }
+@media (min-width: 56.25em) {
+  .nav__links-bottom {
+    margin-top: unset;
+  }
+}
 .nav__items {
   text-transform: uppercase;
   list-style: none;
@@ -477,14 +482,14 @@ h4 {
 .header__logo {
   display: block;
   margin: 0 auto;
-  width: 90%;
+  width: 35.5rem;
   margin-top: -10rem;
   margin-bottom: 4rem;
 }
 @media (min-width: 75em) {
   .header__logo {
     width: auto;
-    height: 90vh;
+    height: 66.3rem;
     margin: 0 auto;
   }
 }
@@ -518,6 +523,7 @@ h4 {
   }
   .home-products__text {
     top: 10rem;
+    left: 5rem;
   }
   .home-products__text .btn-section {
     font-size: 5rem;
@@ -527,7 +533,7 @@ h4 {
 .home-story {
   position: relative;
   width: 100%;
-  height: 55vh;
+  height: 41.2rem;
   margin-bottom: 5rem;
   text-align: center;
 }
@@ -562,7 +568,7 @@ h4 {
 }
 @media (min-width: 56.25em) {
   .home-story {
-    width: 80%;
+    width: 100%;
     margin: 10rem auto;
   }
   .home-story__video {
@@ -571,9 +577,10 @@ h4 {
   .home-story__text {
     font-size: 3.3rem;
   }
-  .home-story .title-about {
-    font-size: 10rem;
-    margin-top: 3rem;
+}
+@media (min-width: 75em) {
+  .home-story {
+    width: 80%;
   }
 }
 

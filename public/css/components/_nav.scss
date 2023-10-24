@@ -51,6 +51,9 @@
 
         &-bottom {
             margin-top: auto;
+            @include respond(tab-port) {
+                margin-top: unset;
+            }
         }
     }
 
